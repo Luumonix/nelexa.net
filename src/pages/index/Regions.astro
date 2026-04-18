@@ -1,0 +1,78 @@
+---
+const regions = [
+  {
+    city: "Dallas",
+    state: "TX",
+    code: "DFW",
+    href: "/locations/dallas",
+    facility: "DataBank DFW1 · 400 S Akard",
+    carriers: "Cogent · Lumen · Hurricane Electric · Zayo",
+    latency: "~1 ms to Equinix DA1, ~14 ms to LAX, ~35 ms to NYC",
+  },
+  {
+    city: "New York",
+    state: "NY",
+    code: "NYC",
+    href: "/locations/new-york",
+    facility: "165 Halsey St, Newark / 60 Hudson",
+    carriers: "Cogent · Telia · GTT · Arelion · Hurricane Electric",
+    latency: "<1 ms to DE-CIX NY, ~5 ms to Ashburn, ~72 ms to LON",
+  },
+];
+---
+
+<section class="bg-black border-t border-white/10">
+  <div class="container mx-auto px-6 py-24 lg:py-28">
+
+    <div class="flex items-baseline justify-between gap-8 mb-16 border-b border-white/10 pb-6">
+      <div>
+        <div class="text-xs font-mono text-white/40 uppercase tracking-[0.2em] mb-3">
+          § where we are
+        </div>
+        <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight">
+          Two cities. Both coasts.
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-14 md:divide-x md:divide-white/10">
+      {regions.map((r, i) => (
+        <div class={i === 1 ? "md:pl-12" : ""}>
+          <div class="flex items-baseline gap-4 mb-6">
+            <h3 class="text-5xl md:text-6xl font-bold font-heading text-white tracking-tight leading-none">
+              {r.city}
+            </h3>
+            <span class="font-mono text-white/30 text-lg">{r.state}</span>
+            <span class="font-mono text-primary-400 text-xs uppercase tracking-[0.2em] ml-auto">
+              {r.code}
+            </span>
+          </div>
+
+          <dl class="space-y-3 font-mono text-sm max-w-md">
+            <div>
+              <dt class="text-white/30 mb-0.5">facility</dt>
+              <dd class="text-white/80">{r.facility}</dd>
+            </div>
+            <div>
+              <dt class="text-white/30 mb-0.5">carriers</dt>
+              <dd class="text-white/80">{r.carriers}</dd>
+            </div>
+            <div>
+              <dt class="text-white/30 mb-0.5">latency</dt>
+              <dd class="text-white/80">{r.latency}</dd>
+            </div>
+          </dl>
+
+          <a
+            href={r.href}
+            class="inline-flex items-center gap-2 mt-8 text-sm text-primary-300 hover:text-primary-200 transition-colors"
+          >
+            View region
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
