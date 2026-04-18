@@ -137,6 +137,22 @@ export function NavMenu() {
       ],
     },
     {
+      name: "Regions",
+      href: "/locations/dallas",
+      items: [
+        {
+          title: "Dallas, TX",
+          href: "/locations/dallas",
+          description: "Our Texas flagship facility — Tier III, carrier-dense, and centrally located for low-latency US coverage.",
+        },
+        {
+          title: "New York, NY",
+          href: "/locations/new-york",
+          description: "East Coast presence with premium connectivity to financial, media, and European networks.",
+        },
+      ],
+    },
+    {
       name: "Case Studies",
       href: "/case-studies",
     },
