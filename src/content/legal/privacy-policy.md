@@ -1,17 +1,17 @@
 ---
 title: "Privacy Policy"
-description: "Charged IT Solutions Privacy Policy - Learn how we collect, use, and protect your personal information."
+description: "Nelexa Privacy Policy - Learn how we collect, use, and protect your personal information."
 lastUpdated: 2025-03-05
 ---
 ## 1. INTRODUCTION AND OVERVIEW
 
-This Privacy Policy ("Policy") is provided by Charged IT Solutions LLC, a limited liability company organized under the laws of Arizona with its principal place of business at: 14853 N 100th Pl, Scottsdale AZ 85260, United States of America. (hereinafter referred to as "Charged IT Solutions," "Charged IT," "Company," "we," "us," or "our").
+This Privacy Policy ("Policy") is provided by Nelexa, Inc., a corporation with offices in Dallas, Texas and New York, New York, United States of America. (hereinafter referred to as "Nelexa," "Company," "we," "us," or "our").
 
-This Policy describes in comprehensive detail the types of information we may collect from you or that you may provide when you visit our website at chargeditsolutions.com (the "Website"), use our mobile applications, utilize our computing services, managed services, advanced DDoS protection services, or any other products or services offered by Charged IT Solutions LLC (collectively, the "Services"), and our practices for collecting, using, maintaining, protecting, disclosing, retaining, and processing that information.
+This Policy describes in comprehensive detail the types of information we may collect from you or that you may provide when you visit our website at nelexa.net (the "Website"), use our mobile applications, utilize our computing services, managed services, advanced DDoS protection services, or any other products or services offered by Nelexa, Inc. (collectively, the "Services"), and our practices for collecting, using, maintaining, protecting, disclosing, retaining, and processing that information.
 
 This Policy applies to information we collect or receive:
 - Through our Website and Services;
-- Through email, text, and other electronic communications between you and Charged IT;
+- Through email, text, and other electronic communications between you and Nelexa;
 - Through mobile and desktop applications you download, which provide dedicated non-browser-based interaction;
 - When you interact with our advertising and applications on third-party websites and services;
 - Through any other means associated with or relating to our Services.
@@ -26,7 +26,7 @@ For the purposes of this Privacy Policy, the following definitions shall apply:
 
 **"Anonymous Information"** means information that does not directly or indirectly identify, and cannot reasonably be used to identify, an individual customer or user.
 
-**"Applicable Law"** means all applicable laws, statutes, regulations, directives, orders, and codes of practice or conduct, including, but not limited to, the California Consumer Privacy Act (CCPA), the California Privacy Rights Act (CPRA), the General Data Protection Regulation (GDPR), the UK Data Protection Act 2018, the Children's Online Privacy Protection Act (COPPA), Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), and other data protection and privacy laws in jurisdictions where Charged IT Solutions LLC operates or provides Services.
+**"Applicable Law"** means all applicable laws, statutes, regulations, directives, orders, and codes of practice or conduct, including, but not limited to, the California Consumer Privacy Act (CCPA), the California Privacy Rights Act (CPRA), the General Data Protection Regulation (GDPR), the UK Data Protection Act 2018, the Children's Online Privacy Protection Act (COPPA), Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), and other data protection and privacy laws in jurisdictions where Nelexa, Inc. operates or provides Services.
 
 **"Business Purpose"** means the use of Personal Information for the Company's operational purposes, or other notified purposes, provided that the use of Personal Information is reasonably necessary and proportionate to achieve the operational purpose for which the Personal Information was collected or processed or for another operational purpose that is compatible with the context in which the Personal Information was collected.
 
@@ -48,7 +48,7 @@ For the purposes of this Privacy Policy, the following definitions shall apply:
 
 ## 3. INFORMATION WE COLLECT AND HOW WE COLLECT IT
 
-Charged IT Solutions LLC collects several types of information from and about users of our Services, including:
+Nelexa, Inc. collects several types of information from and about users of our Services, including:
 
 ### 3.1 Categories of Personal Information
 
@@ -297,7 +297,7 @@ We use information that we collect about you or that you provide to us, includin
 - To protect our rights and property, and the rights, property, and safety of our users or others
 - To enforce our agreements, policies, and Terms of Service
 - To establish, exercise, or defend legal claims
-- To prevent harm to the rights, property, or safety of Charged IT, our users, or the public as required or permitted by law
+- To prevent harm to the rights, property, or safety of Nelexa, our users, or the public as required or permitted by law
 
 ### 5.6 Business Transfers and Transactions
 
@@ -339,7 +339,7 @@ If we or our subsidiaries are involved in a merger, acquisition, financing due d
 We may disclose your Personal Information:
 - To comply with any court order, law, or legal process, including to respond to any government or regulatory request
 - To enforce or apply our Terms of Service and other agreements, including for billing and collection purposes
-- If we believe disclosure is necessary or appropriate to protect the rights, property, or safety of Charged IT, our customers, or others
+- If we believe disclosure is necessary or appropriate to protect the rights, property, or safety of Nelexa, our customers, or others
 
 ### 6.5 With Your Consent
 
@@ -432,10 +432,10 @@ Depending on your place of residence, you may have additional rights under appli
 ### 9.3 Exercising Your Rights
 
 To exercise any of the rights described above, please submit a request to us by:
-- Emailing us at privacy [@] chargeditsolutions.com
+- Emailing us at privacy [@] nelexa.net
 - Calling us at +1 (602) 209-6009
-- Visiting chargeditsolutions.com
-- Writing to us at 14853 N 100th Pl, Scottsdale AZ 85260 USA.
+- Visiting nelexa.net
+- Writing to us at Dallas, TX and New York, NY USA.
 
 Before fulfilling your request, we may require specific information from you to help us confirm your identity and ensure your right to access your Personal Information (or to exercise any of your other rights). This is a security measure to ensure that Personal Information is not disclosed to any person who has no right to receive it.
 
@@ -457,7 +457,7 @@ Our Website and Services may contain links to third-party websites, applications
 
 ## 12. INTERNATIONAL DATA TRANSFERS
 
-Charged IT Solutions LLC is based in the United States. When you access or use our Services, your information may be transferred to, stored, and processed in the United States and other countries where our service providers maintain facilities. These countries may not have the same data protection laws as the country in which you initially provided the information.
+Nelexa, Inc. is based in the United States. When you access or use our Services, your information may be transferred to, stored, and processed in the United States and other countries where our service providers maintain facilities. These countries may not have the same data protection laws as the country in which you initially provided the information.
 
 ### 12.1 Data Transfers from the EEA, UK, or Switzerland
 
@@ -495,43 +495,43 @@ Our Services are not intended for children under 16 years of age, and we do not 
 
 To ask questions or comment about this Privacy Policy and our privacy practices, please contact our Data Protection Officer or Privacy Team at:
 
-**Charged IT Solutions LLC**  
+**Nelexa, Inc.**  
 Attn: Privacy Team  
 14853 N 100th Pl
-Scottsdale, AZ 85260 
+Dallas, TX / New York, NY 
 United States of America
 
-Email: [privacy@chargeditsolutions.com]  
+Email: [privacy@nelexa.net]  
 Phone: +1 (602) 209-6009
-Website: chargeditsolutions.com
+Website: nelexa.net
 
 ### 15.1 For Residents of the European Economic Area
 
 If you are located in the European Economic Area, our EU representative can be contacted at:
 
-**Charged IT Solutions LLC**  
+**Nelexa, Inc.**  
 Attn: Privacy Team  
 14853 N 100th Pl
-Scottsdale, AZ 85260 
+Dallas, TX / New York, NY 
 United States of America
 
-Email: [privacy@chargeditsolutions.com]  
+Email: [privacy@nelexa.net]  
 Phone: +1 (602) 209-6009
-Website: chargeditsolutions.com
+Website: nelexa.net
 
 ### 15.2 For Residents of the United Kingdom
 
 If you are located in the United Kingdom, our UK representative can be contacted at:
 
-**Charged IT Solutions LLC**  
+**Nelexa, Inc.**  
 Attn: Privacy Team  
 14853 N 100th Pl
-Scottsdale, AZ 85260 
+Dallas, TX / New York, NY 
 United States of America
 
-Email: [privacy@chargeditsolutions.com]  
+Email: [privacy@nelexa.net]  
 Phone: +1 (602) 209-6009
-Website: chargeditsolutions.com
+Website: nelexa.net
 
 
 ## 16. DISPUTE RESOLUTION
@@ -544,15 +544,15 @@ We encourage you to contact us first to try to resolve any dispute. Please conta
 
 ### 16.2 Class Action Waiver
 
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, YOU AND CHARGED IT SOLUTIONS LLC AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE ACTION.
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, YOU AND NELEXA, INC. AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE ACTION.
 
 ### 16.3 Small Claims Court
 
-Notwithstanding the foregoing, either you or Charged IT Solutions LLC may bring an individual action in small claims court in Maricopa County, Arizona, provided that such action is within the jurisdiction of that court.
+Notwithstanding the foregoing, either you or Nelexa, Inc. may bring an individual action in small claims court in Dallas County, Texas, provided that such action is within the jurisdiction of that court.
 
 ## 17. GOVERNING LAW
 
-This Privacy Policy shall be governed by and construed in accordance with the laws of the state of Arizona, without giving effect to any choice of law or conflict of law provisions. Any legal suit, action, or proceeding arising out of or related to this Privacy Policy or the Services shall be instituted exclusively in the federal courts of the United States or the courts of the state of Arizona, in each case located in the city of Scottsdale and county of Maricopa County, and you hereby consent to the personal jurisdiction of such courts. HOWEVER, IF YOU ARE A CONSUMER AND YOU LIVE IN A COUNTRY WHERE CHARGED IT SOLUTIONS LLC MARKETS OR DISTRIBUTES SERVICES, THE LAWS OF YOUR COUNTRY MAY REQUIRE THAT THE LAWS OF THAT COUNTRY APPLY TO YOUR RELATIONSHIP WITH US, INCLUDING THIS PRIVACY POLICY, AND CERTAIN DISPUTES MUST BE RESOLVED IN YOUR LOCAL COURTS. NOTHING IN THIS SECTION IS INTENDED TO LIMIT THOSE RIGHTS TO THE EXTENT THEY CANNOT BE WAIVED UNDER THE LAWS OF YOUR JURISDICTION.
+This Privacy Policy shall be governed by and construed in accordance with the laws of the State of Texas, without giving effect to any choice of law or conflict of law provisions. Any legal suit, action, or proceeding arising out of or related to this Privacy Policy or the Services shall be instituted exclusively in the federal courts of the United States or the courts of the State of Texas, in each case located in the City of Dallas and County of Dallas, and you hereby consent to the personal jurisdiction of such courts. HOWEVER, IF YOU ARE A CONSUMER AND YOU LIVE IN A COUNTRY WHERE NELEXA, INC. MARKETS OR DISTRIBUTES SERVICES, THE LAWS OF YOUR COUNTRY MAY REQUIRE THAT THE LAWS OF THAT COUNTRY APPLY TO YOUR RELATIONSHIP WITH US, INCLUDING THIS PRIVACY POLICY, AND CERTAIN DISPUTES MUST BE RESOLVED IN YOUR LOCAL COURTS. NOTHING IN THIS SECTION IS INTENDED TO LIMIT THOSE RIGHTS TO THE EXTENT THEY CANNOT BE WAIVED UNDER THE LAWS OF YOUR JURISDICTION.
 
 ## 18. SEVERABILITY
 
@@ -564,7 +564,7 @@ No waiver of any term of this Privacy Policy shall be deemed a further or contin
 
 ## 20. ENTIRE AGREEMENT
 
-This Privacy Policy, together with any other privacy notices or terms provided by us, constitutes the sole and entire agreement between you and Charged IT Solutions LLC regarding the collection, use, and processing of your Personal Information and supersedes all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding such subject matter.
+This Privacy Policy, together with any other privacy notices or terms provided by us, constitutes the sole and entire agreement between you and Nelexa, Inc. regarding the collection, use, and processing of your Personal Information and supersedes all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding such subject matter.
 
 ## 21. CALIFORNIA RESIDENTS: ADDITIONAL PRIVACY RIGHTS
 
@@ -628,9 +628,9 @@ As a California resident, you have the following rights:
 ### 21.5 Exercising Your California Privacy Rights
 
 To exercise the rights described above, please submit a verifiable consumer request to us by:
-- Emailing us at [privacy@chargeditsolutions.com.com]
+- Emailing us at [privacy@nelexa.net.com]
 - Calling our number at +1 (602) 209-6009
-- Visiting chargeditsolutions.com
+- Visiting nelexa.net
 
 Only you, or a person registered with the California Secretary of State that you authorize to act on your behalf, may make a verifiable consumer request related to your Personal Information.
 
@@ -660,29 +660,29 @@ This section applies to individuals in the European Economic Area, the United Ki
 
 ### 23.1 Data Controller
 
-Charged IT Solutions LLC is the data controller of your Personal Information covered by this Privacy Policy for purposes of European data protection legislation (including the EU General Data Protection Regulation and the UK Data Protection Act 2018).
+Nelexa, Inc. is the data controller of your Personal Information covered by this Privacy Policy for purposes of European data protection legislation (including the EU General Data Protection Regulation and the UK Data Protection Act 2018).
 
 Our EU representative can be contacted at:
-**Charged IT Solutions LLC**  
+**Nelexa, Inc.**  
 Attn: Privacy Team  
 14853 N 100th Pl
-Scottsdale, AZ 85260 
+Dallas, TX / New York, NY 
 United States of America
 
-Email: [privacy@chargeditsolutions.com]  
+Email: [privacy@nelexa.net]  
 Phone: +1 (602) 209-6009
-Website: chargeditsolutions.com
+Website: nelexa.net
 
 Our UK representative can be contacted at:
-**Charged IT Solutions LLC**  
+**Nelexa, Inc.**  
 Attn: Privacy Team  
 14853 N 100th Pl
-Scottsdale, AZ 85260 
+Dallas, TX / New York, NY 
 United States of America
 
-Email: [privacy@chargeditsolutions.com]  
+Email: [privacy@nelexa.net]  
 Phone: +1 (602) 209-6009
-Website: chargeditsolutions.com
+Website: nelexa.net
 ### 23.2 Legal Bases for Processing
 
 We only process your Personal Information when we have a valid legal basis to do so. Our legal bases for processing your Personal Information are described in Section 4 of this Privacy Policy.

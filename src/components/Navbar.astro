@@ -1,17 +1,16 @@
 ---
-import { Button } from '@/components/ui/button';
 import { NavMenu } from '@/components/ui/NavMenu';
 import { Image } from 'astro:assets';
-import logo from '@/assets/cits/charged-banner-white-3x-nobg.png';
+import logo from '@/assets/nelexa/nelexa-logo.png';
 ---
 
 <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="main-navbar">
-  <div class="bg-black border-b border-white/10 transition-all duration-300" id="navbar-bg">
-    <div class="container mx-auto px-4 h-[4.5rem] flex items-center justify-between">
+  <div class="bg-black/80 backdrop-blur-xl border-b border-white/10 transition-all duration-300" id="navbar-bg">
+    <div class="container mx-auto h-[4.5rem] flex items-center justify-between">
       <!-- Logo -->
       <div class="relative z-10">
-        <a href="/" aria-label="Charged IT Solutions Home" class="block">
-          <Image src={logo} alt="Charged IT Solutions" class="h-8 w-auto filter drop-shadow-md" loading="eager" />
+        <a href="/" aria-label="Nelexa Home" class="block">
+          <Image src={logo} alt="Nelexa" class="h-7 w-auto" loading="eager" />
         </a>
       </div>
       
@@ -21,194 +20,112 @@ import logo from '@/assets/cits/charged-banner-white-3x-nobg.png';
         class="lg:hidden relative z-50 flex flex-col justify-between w-7 h-5 group"
         aria-label="Toggle menu" 
         aria-expanded="false" 
-        aria-controls="navbar-links"
+        aria-controls="mobile-menu"
       >
-        <span class="w-full h-0.5 bg-white rounded-full transition-all duration-300 transform origin-left group-hover:bg-secondary"></span>
-        <span class="w-4/5 h-0.5 bg-white rounded-full transition-all duration-300 transform origin-left ml-auto group-hover:bg-secondary"></span>
-        <span class="w-3/5 h-0.5 bg-white rounded-full transition-all duration-300 transform origin-left ml-auto group-hover:bg-secondary"></span>
+        <span class="w-full h-0.5 bg-white rounded-full transition-all duration-300 transform origin-left"></span>
+        <span class="w-4/5 h-0.5 bg-white rounded-full transition-all duration-300 transform origin-left ml-auto"></span>
+        <span class="w-3/5 h-0.5 bg-white rounded-full transition-all duration-300 transform origin-left ml-auto"></span>
       </button>
       
       <!-- Desktop Navigation -->
-      <div class="hidden lg:flex items-center space-x-8">
+      <div class="hidden lg:flex items-center space-x-6">
         <NavMenu client:load />
         
-        <!-- CTA Button -->
-        <div>
-          <a 
-            href="https://client.chargeditsolutions.com/login/" 
-            target="_blank"
-            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2 shadow-lg shadow-secondary/20 transition-colors duration-300"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
-              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            <span>Customer Portal</span>
-          </a>
-        </div>
+        <a 
+          href="/contact"
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold bg-primary-600 text-white hover:bg-primary-500 h-9 px-4 py-2 transition-colors duration-200 shadow-lg shadow-primary-900/30"
+        >
+          <span>Contact Sales</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
   
-  <!-- Mobile Menu (Hidden by Default) -->
+  <!-- Mobile Menu -->
   <div 
     id="mobile-menu" 
     class="fixed inset-0 bg-black z-40 flex flex-col p-6 pt-24 transform transition-all duration-500 -translate-y-full lg:hidden"
     aria-hidden="true"
   >
     <div class="flex flex-col space-y-8 flex-1 overflow-y-auto">
-      <!-- Mobile Navigation Links -->
-      <div class="space-y-2">
-        <div class="text-white/50 uppercase text-xs font-semibold tracking-wider mb-3 pl-3">Solutions</div>
-        
-        <a href="/solutions/ddos-protection" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">DDoS Protection</div>
+      <div class="space-y-1">
+        <div class="text-white/40 uppercase text-xs font-semibold tracking-wider mb-3 pl-3">Services</div>
+        <a href="/dedicated" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors">
+          <div class="text-white font-medium">Dedicated Servers</div>
         </a>
-        
-        <a href="/solutions/virtual-machines" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Virtual Machines</div>
+        <a href="/colocation" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors">
+          <div class="text-white font-medium">Colocation</div>
         </a>
-        
-        <a href="/solutions/dedicated-metal" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Dedicated Servers</div>
+        <a href="/hardware" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors">
+          <div class="text-white font-medium">Hardware Solutions</div>
         </a>
-        
-        <a href="/solutions/colocation" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Colocation</div>
+        <a href="/ip-transit" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors">
+          <div class="text-white font-medium">IP Transit</div>
         </a>
       </div>
       
-      <div class="space-y-2">
-        <div class="text-white/50 uppercase text-xs font-semibold tracking-wider mb-3 pl-3">Services</div>
-        
-        <a href="/managed-services" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Managed IT</div>
+      <div class="space-y-1">
+        <div class="text-white/40 uppercase text-xs font-semibold tracking-wider mb-3 pl-3">Company</div>
+        <a href="/case-studies" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors">
+          <div class="text-white font-medium">Case Studies</div>
         </a>
-        
-        <a href="/services/cloud-management" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Cloud Management</div>
+        <a href="/locations/dallas" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors">
+          <div class="text-white font-medium">Dallas</div>
         </a>
-        
-        <a href="/services/security-services" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Security Services</div>
+        <a href="/locations/new-york" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors">
+          <div class="text-white font-medium">New York</div>
         </a>
-        
-        <a href="/services/monitoring-support" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Monitoring and Support</div>
-        </a>
-      </div>
-      
-      <div class="space-y-2">
-        <div class="text-white/50 uppercase text-xs font-semibold tracking-wider mb-3 pl-3">Regions</div>
-        
-        <a href="/regions/phoenix" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Phoenix, AZ</div>
-        </a>
-        
-        <a href="/regions/chicago" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Chicago, IL</div>
-        </a>
-        
-        <a href="/regions/miami" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Miami, FL</div>
-        </a>
-        
-        <a href="/regions/london" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">London, UK</div>
-        </a>
-      </div>
-      
-      <div class="space-y-2">
-        <div class="text-white/50 uppercase text-xs font-semibold tracking-wider mb-3 pl-3">Resources</div>
-        
-        <a href="/#about" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">About Us</div>
-        </a>
-        
-        <a href="/blog" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Blog</div>
-        </a>
-        
-        <a href="https://lg.chargeditsolutions.com" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Looking Glass</div>
-        </a>
-        
-        <a href="https://status.chargeditsolutions.com" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200">
-          <div class="text-white font-medium text-base">Status Page</div>
+        <a href="/contact" class="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors">
+          <div class="text-white font-medium">Contact Sales</div>
         </a>
       </div>
     </div>
     
-    <!-- Mobile CTA Button -->
     <div class="mt-8">
       <a 
-        href="https://client.chargeditsolutions.com/login/" 
-        target="_blank"
-        class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-secondary text-secondary-foreground font-medium text-center rounded-lg shadow-lg transition-colors duration-300 hover:bg-secondary/80 hover:shadow-xl"
+        href="/contact"
+        class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-primary-600 text-white font-semibold text-center rounded-lg hover:bg-primary-500 transition-colors"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
-          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
-        </svg>
-        <span>Customer Portal</span>
+        <span>Contact Sales</span>
       </a>
     </div>
   </div>
 </nav>
 
 <script>
-  // Function to initialize mobile menu
   function initializeMobileMenu() {
-    const navbar = document.getElementById('main-navbar');
-    const navbarBg = document.getElementById('navbar-bg');
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
-    
     if (!menuToggle || !mobileMenu) {
-      // If elements not found, try again after a short delay
       setTimeout(initializeMobileMenu, 100);
       return;
     }
-    
-    // Remove any existing event listeners to prevent duplicates
     const newMenuToggle = menuToggle.cloneNode(true) as HTMLButtonElement;
     menuToggle.parentNode?.replaceChild(newMenuToggle, menuToggle);
-    
-    // Mobile menu toggle
+
     newMenuToggle.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      
       const isExpanded = newMenuToggle.getAttribute('aria-expanded') === 'true';
-      
       newMenuToggle.setAttribute('aria-expanded', (!isExpanded).toString());
       mobileMenu.setAttribute('aria-hidden', isExpanded.toString());
-      
-      // Toggle mobile menu visibility
       if (isExpanded) {
-        // Close menu
         mobileMenu.classList.remove('translate-y-0');
         mobileMenu.classList.add('-translate-y-full');
-        
-        // Reset hamburger icon
         newMenuToggle.classList.remove('active');
-        
-        // Enable scrolling
         document.body.style.overflow = 'auto';
       } else {
-        // Open menu
         mobileMenu.classList.add('translate-y-0');
         mobileMenu.classList.remove('-translate-y-full');
-        
-        // Transform hamburger to X
         newMenuToggle.classList.add('active');
-        
-        // Disable scrolling
         document.body.style.overflow = 'hidden';
       }
     });
-    
-    // Function to close the mobile menu
+
     const closeMobileMenu = () => {
       mobileMenu.classList.remove('translate-y-0');
       mobileMenu.classList.add('-translate-y-full');
@@ -216,78 +133,24 @@ import logo from '@/assets/cits/charged-banner-white-3x-nobg.png';
       newMenuToggle.classList.remove('active');
       document.body.style.overflow = 'auto';
     };
-    
-    // Close mobile menu when clicking on a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      const target = e.target as HTMLElement;
-      if (!mobileMenu.contains(target) && !newMenuToggle.contains(target) && mobileMenu.classList.contains('translate-y-0')) {
-        closeMobileMenu();
-      }
-    });
-    
-    // Close menu on escape key
+
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('translate-y-0')) {
-        closeMobileMenu();
-      }
+      if (e.key === 'Escape' && mobileMenu.classList.contains('translate-y-0')) closeMobileMenu();
     });
   }
-  
-  // Initialize when DOM is ready
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeMobileMenu);
   } else {
-    // DOM is already loaded
     initializeMobileMenu();
   }
-  
-  // Also initialize on astro:page-load for client-side navigation
   document.addEventListener('astro:page-load', initializeMobileMenu);
 </script>
 
 <style>
-  /* Hamburger menu animation */
-  #menu-toggle.active span:nth-child(1) {
-    @apply translate-y-2 rotate-45 w-full;
-  }
-  
-  #menu-toggle.active span:nth-child(2) {
-    @apply opacity-0 -translate-x-5;
-  }
-  
-  #menu-toggle.active span:nth-child(3) {
-    @apply -translate-y-2 -rotate-45 w-full;
-  }
-  
-  /* Navigation menu overrides for transparent background */
-  nav :global([data-radix-navigation-menu-viewport]),
-  nav :global([data-radix-navigation-menu-viewport] > *),
-  nav :global(.radix-navigation-menu),
-  nav :global([data-radix-navigation-menu-trigger][data-state="open"]) {
-    @apply bg-transparent border-none shadow-none;
-  }
-  
-  nav :global([data-radix-navigation-menu-content]) {
-    @apply translate-y-0;
-  }
-  
-  nav :global([data-radix-navigation-menu-root]) {
-    @apply relative;
-  }
-  
-  nav :global([data-radix-navigation-menu-content]) {
-    @apply absolute top-full left-0;
-  }
-  
-  /* Hover gap for menu trigger */
-  nav :global([data-radix-navigation-menu-trigger])::after {
-    content: "";
-    @apply absolute -bottom-2.5 left-0 w-full h-2.5 bg-transparent;
-  }
+  #menu-toggle.active span:nth-child(1) { @apply translate-y-2 rotate-45 w-full; }
+  #menu-toggle.active span:nth-child(2) { @apply opacity-0 -translate-x-5; }
+  #menu-toggle.active span:nth-child(3) { @apply -translate-y-2 -rotate-45 w-full; }
 </style>

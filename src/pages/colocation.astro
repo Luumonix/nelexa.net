@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { QuoteCalculator } from '@/components/colocation/QuoteCalculator';
+---
+
+<Layout
+  title="Colocation | Nelexa"
+  description="Carrier-neutral colocation in Dallas and New York. 1U to full-rack with transparent instant pricing, redundant power, and 24/7 remote hands."
+  structuredData={{ type: 'service', data: { service: { type: 'Colocation Services', name: 'Nelexa Colocation', description: '1U to 42U colocation in Dallas and New York.' } } }}
+>
+  <!-- Hero -->
+  <section class="relative pt-36 pb-16 bg-black overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-primary-800/25 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div class="container mx-auto relative z-10">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-white/10 bg-white/[0.03] text-xs font-medium text-white/70">
+          Colocation
+        </div>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-6">
+          Your hardware. <span class="gradient-text italic">Our data centers.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed">
+          1U to full-cabinet colocation in carrier-neutral Dallas and New York facilities. Transparent pricing, redundant everything, 24/7 on-site hands.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instant Quote -->
+  <section id="quote" class="relative py-16 bg-black scroll-mt-24">
+    <div class="container mx-auto">
+      <div class="max-w-3xl mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full border border-primary-500/30 bg-primary-500/10 text-xs font-medium text-primary-300">
+          Instant Quote
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tighter text-white mb-3">Configure your colocation solution and see pricing instantly.</h2>
+        <p class="text-white/60">Real numbers, not "contact us for pricing." Pick your location, preset, RU, power, and network — we do the math.</p>
+      </div>
+
+      <QuoteCalculator client:load />
+    </div>
+  </section>
+
+  <!-- Included Features -->
+  <section class="relative py-20 bg-black border-t border-white/5">
+    <div class="container mx-auto">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tighter text-white mb-3">What's included — every cabinet, every time.</h2>
+        <p class="text-white/60">We don't believe in nickel-and-diming. These are standard.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        {[
+          { title: "Redundant Power", desc: "A+B feeds with UPS and generator backup on every cabinet." },
+          { title: "N+1 Cooling", desc: "Precision cooling designed for sustained high-density workloads." },
+          { title: "24/7 Remote Hands", desc: "On-site senior technicians for swaps, reboots, and troubleshooting." },
+          { title: "Carrier-Neutral", desc: "Bring your own transit or use ours — mix and match as you grow." },
+          { title: "Physical Security", desc: "Mantrap entry, biometric access, full CCTV, 24/7 on-site staff." },
+          { title: "Cross Connects", desc: "In-building cross-connects to all major carriers, peering exchanges, and clouds." },
+          { title: "Managed Installs", desc: "Shipping receiving, racking, cabling, labeling — done right." },
+          { title: "Transparent Pricing", desc: "No hidden fees. No surprise power bills. What you see is what you pay." },
+        ].map(f => (
+          <div class="glass-card p-6">
+            <h3 class="text-base font-semibold text-white mb-2">{f.title}</h3>
+            <p class="text-sm text-white/60 leading-relaxed">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 bg-black">
+    <div class="container mx-auto">
+      <div class="relative glass-card overflow-hidden p-10 md:p-14 text-center">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-600/15 to-accent-700/10"></div>
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tighter text-white mb-4">Larger deployment in mind?</h2>
+          <p class="text-lg text-white/70 mb-8 max-w-2xl mx-auto">Multi-cabinet, private cage, or custom cross-connects. We've done it — let's talk specifics.</p>
+          <a href="/contact" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-lg transition-colors shadow-xl shadow-primary-900/40">
+            Contact Sales
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

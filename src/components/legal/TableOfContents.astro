@@ -8,26 +8,24 @@ interface Props {
 }
 
 const { headings } = Astro.props;
-
-// Filter headings to only include h2 and h3
-const filteredHeadings = headings.filter(heading => heading.depth === 2 || heading.depth === 3);
+const filteredHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
 ---
 
-<div class="sticky top-24 max-h-[calc(100vh-150px)] overflow-y-auto p-6 bg-gray-100 rounded-lg mb-6">
+<div class="sticky top-24 max-h-[calc(100vh-150px)] overflow-y-auto p-6 bg-white/[0.03] border border-white/10 rounded-xl mb-6">
   <div class="flex justify-between items-center mb-4">
-    <h2 class="text-xl font-bold m-0 text-primary-900">Table of Contents</h2>
-    <button id="toc-toggle" class="hidden md:hidden bg-transparent border-0 cursor-pointer text-primary-900 p-1" aria-label="Toggle table of contents">
+    <h2 class="text-sm font-semibold m-0 text-white uppercase tracking-wider">Contents</h2>
+    <button id="toc-toggle" class="hidden md:hidden bg-transparent border-0 cursor-pointer text-white p-1" aria-label="Toggle table of contents">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300">
         <polyline points="6 9 12 15 18 9"></polyline>
       </svg>
     </button>
   </div>
-  
+
   <nav id="toc-nav" class="toc-nav">
     <ul class="list-none p-0 m-0">
       {filteredHeadings.map(heading => (
-        <li class={`mb-2 ${heading.depth === 3 ? 'pl-4 text-sm' : ''}`}>
-          <a href={`#${heading.slug}`} class="toc-link block py-1 text-gray-500 no-underline transition-all duration-200 border-l-2 border-transparent pl-2 hover:text-primary-900 hover:translate-x-0.5">
+        <li class={`mb-1.5 ${heading.depth === 3 ? 'pl-4 text-xs' : 'text-sm'}`}>
+          <a href={`#${heading.slug}`} class="toc-link block py-1 text-white/60 no-underline transition-all duration-200 border-l-2 border-transparent pl-2 hover:text-white">
             {heading.text}
           </a>
         </li>
@@ -37,87 +35,49 @@ const filteredHeadings = headings.filter(heading => heading.depth === 2 || headi
 </div>
 
 <script>
-  // Handle TOC toggle on mobile
   document.addEventListener('DOMContentLoaded', () => {
     const tocToggle = document.getElementById('toc-toggle');
     const tocNav = document.getElementById('toc-nav');
-    
     if (tocToggle && tocNav) {
       tocToggle.addEventListener('click', () => {
         tocNav.classList.toggle('active');
         tocToggle.classList.toggle('active');
-        
         const isExpanded = tocToggle.getAttribute('aria-expanded') === 'true';
         tocToggle.setAttribute('aria-expanded', (!isExpanded).toString());
       });
     }
-    
-    // Highlight current section in TOC
     const observeHeadings = () => {
       const headingElements = document.querySelectorAll('h2, h3');
-      
       if (headingElements.length === 0) return;
-      
       const tocLinks = document.querySelectorAll('.toc-link');
-      
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              // Remove active class from all links
               tocLinks.forEach((link) => link.classList.remove('active'));
-              
-              // Add active class to current link
               const id = entry.target.getAttribute('id');
               const activeLink = document.querySelector(`.toc-link[href="#${id}"]`);
               activeLink?.classList.add('active');
             }
           });
         },
-        {
-          rootMargin: '-100px 0px -66%',
-          threshold: 0
-        }
+        { rootMargin: '-100px 0px -66%', threshold: 0 }
       );
-      
-      headingElements.forEach((heading) => {
-        observer.observe(heading);
-      });
+      headingElements.forEach((heading) => observer.observe(heading));
     };
-    
-    // Call the function after a short delay to ensure content is rendered
     setTimeout(observeHeadings, 100);
   });
 </script>
 
 <style>
   .toc-link.active {
-    @apply text-primary-900 border-l-primary-900 font-medium;
+    @apply text-primary-300 border-l-primary-500 font-medium;
   }
-  
-  #toc-toggle.active svg {
-    transform: rotate(180deg);
-  }
-  
+  #toc-toggle.active svg { transform: rotate(180deg); }
   @media (max-width: 768px) {
-    .sticky {
-      position: relative;
-      top: 0;
-      max-height: none;
-    }
-    
-    #toc-toggle {
-      display: block;
-    }
-    
-    .toc-nav {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-    
-    .toc-nav.active {
-      max-height: 500px;
-    }
+    .sticky { position: relative; top: 0; max-height: none; }
+    #toc-toggle { display: block; }
+    .toc-nav { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .toc-nav.active { max-height: 500px; }
   }
 </style>

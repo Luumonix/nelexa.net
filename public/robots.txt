@@ -1,37 +1,23 @@
-# Robots.txt for Charged IT Solutions
-# https://chargeditsolutions.com
+# Robots.txt for Nelexa
+# https://nelexa.net
 
-# Allow all crawlers
 User-agent: *
 Allow: /
 
-# Disallow admin or private paths (if any exist in the future)
-# Disallow: /admin/
-# Disallow: /api/
+Sitemap: https://nelexa.net/sitemap-index.xml
 
-# Sitemap location
-Sitemap: https://chargeditsolutions.com/sitemap-index.xml
-
-# Crawl-delay for respectful crawling (optional)
-# Crawl-delay: 1
-
-# Specific rules for major search engines
-# Google
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
-# Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 0
 
-# Yahoo/Slurp
 User-agent: Slurp
 Allow: /
 Crawl-delay: 0
 
-# Block bad bots (optional - add as needed)
 User-agent: AhrefsBot
 Disallow: /
 

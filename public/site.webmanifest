@@ -1,7 +1,7 @@
 {
-  "name": "Charged IT Solutions",
-  "short_name": "Charged IT",
-  "description": "Affordable VPS hosting, dedicated servers, colocation, and DDoS protection in Phoenix, Miami, Chicago & London datacenters",
+  "name": "Nelexa",
+  "short_name": "Nelexa",
+  "description": "Enterprise-grade dedicated servers, colocation, hardware solutions, and IP transit in Dallas and New York.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -14,8 +14,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#0090EA",
-  "background_color": "#ffffff",
+  "theme_color": "#7C3AED",
+  "background_color": "#000000",
   "display": "standalone",
   "start_url": "/",
   "scope": "/"

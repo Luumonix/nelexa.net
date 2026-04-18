@@ -1,149 +1,107 @@
 ---
-import { Button } from '@/components/ui/button';
-
 const services = [
   {
-    id: "cloud-compute",
-    title: "Virtual Machines",
-    subtitle: "From $5/month",
-    description: "High-performance VMs on enterprise hardware. Deploy in seconds, scale instantly, pay only for what you use.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6.5 19H17.5M6.5 19C4.567 19 3 17.433 3 15.5C3 13.567 4.567 12 6.5 12C6.5 9.239 8.739 7 11.5 7C14.261 7 16.5 9.239 16.5 12C18.433 12 20 13.567 20 15.5C20 17.433 18.433 19 16.5 19M6.5 19H16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
-    features: ["Deploy in <30 seconds", "Auto-scaling included", "Hourly billing", "99.99% uptime SLA"],
-    highlight: true
-  },
-  {
-    id: "dedicated-metal",
+    number: "01",
     title: "Dedicated Servers",
-    subtitle: "From $89/month",
-    description: "Single-tenant servers with full hardware control. IPMI access, custom configs, and no virtualization overhead.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5 12H19M5 12C3.89543 12 3 11.1046 3 10V6C3 4.89543 3.89543 4 5 4H19C20.1046 4 21 4.89543 21 6V10C21 11.1046 20.1046 12 19 12M5 12C3.89543 12 3 12.8954 3 14V18C3 19.1046 3.89543 20 5 20H19C20.1046 20 21 19.1046 21 18V14C21 12.8954 20.1046 12 19 12M7 8H7.01M7 16H7.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
-    features: ["2-hour setup", "No setup fees", "10Gbps included", "Custom hardware"]
+    href: "/dedicated",
+    description: "Purpose-built HPC and EVC bare-metal platforms with AMD Ryzen 9000-series and dual-socket Intel Xeon configurations. Fully managed, ready in hours.",
+    features: [
+      "AMD Ryzen 9950X / Dual Xeon Gold 6138",
+      "Up to 512GB DDR4 / 256GB DDR5",
+      "Dual 10Gbps network, 1Gbps unmetered",
+      "Dallas & New York availability",
+    ],
   },
   {
-    id: "ddos-protection",
-    title: "DDoS Protection",
-    subtitle: "Always-on defense",
-    description: "17+ Tbps capacity, instant mitigation, and 24/7 SOC monitoring. Sleep through attacks.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M9 12L11 14L15 10M20.6179 5.98434C20.4132 5.99472 20.2072 5.99997 20 5.99997C16.9265 5.99997 14.123 4.84453 11.9999 2.94434C9.87691 4.84446 7.07339 5.99985 4 5.99985C3.79277 5.99985 3.58678 5.9946 3.38213 5.98422C3.1327 6.94783 3 7.95842 3 9.00001C3 14.5915 6.82432 19.2898 12 20.622C17.1757 19.2898 21 14.5915 21 9.00001C21 7.95847 20.8673 6.94791 20.6179 5.98434Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
-    features: ["Layer 3-7 protection", "<10ms mitigation", "Global scrubbing", "Zero downtime"],
-    highlight: true
-  },
-  {
-    id: "colocation",
+    number: "02",
     title: "Colocation",
-    subtitle: "From $70/U",
-    description: "Premium datacenter space with redundant power, cooling, and connectivity. Your gear, our fortress.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
-    features: ["4 locations", "N+1 power", "24/7 access", "Cross-connects"]
+    href: "/colocation",
+    description: "1U to full-rack space in carrier-neutral Dallas and New York facilities. Transparent instant quoting, no hidden fees, no surprises.",
+    features: [
+      "Half Rack: 21U, 2.5kW, 1Gbps",
+      "Full Rack: 42U, 6kW, 1Gbps",
+      "24/7 on-site remote hands",
+      "Redundant power & cooling",
+    ],
   },
   {
-    id: "managed-services",
-    title: "Managed Services",
-    subtitle: "Coming soon",
-    description: "Let our team handle your infrastructure. Monitoring, patching, backups, and on-call support.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10.3246 4.31731C10.751 2.5609 13.249 2.5609 13.6754 4.31731C13.9508 5.45193 15.2507 5.99038 16.2478 5.38285C17.7913 4.44239 19.5576 6.2087 18.6172 7.75218C18.0096 8.74925 18.5481 10.0492 19.6827 10.3246C21.4391 10.751 21.4391 13.249 19.6827 13.6754C18.5481 13.9508 18.0096 15.2507 18.6172 16.2478C19.5576 17.7913 17.7913 19.5576 16.2478 18.6172C15.2507 18.0096 13.9508 18.5481 13.6754 19.6827C13.249 21.4391 10.751 21.4391 10.3246 19.6827C10.0492 18.5481 8.74926 18.0096 7.75219 18.6172C6.2087 19.5576 4.44239 17.7913 5.38285 16.2478C5.99038 15.2507 5.45193 13.9508 4.31731 13.6754C2.5609 13.249 2.5609 10.751 4.31731 10.3246C5.45193 10.0492 5.99037 8.74926 5.38285 7.75218C4.44239 6.2087 6.2087 4.44239 7.75219 5.38285C8.74926 5.99037 10.0492 5.45193 10.3246 4.31731Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
-    features: ["24/7 monitoring", "Proactive updates", "Backup management", "Expert support"]
+    number: "03",
+    title: "Hardware Solutions",
+    href: "/hardware",
+    description: "Custom server builds, enterprise procurement, and complete lifecycle management. From single servers to complete infrastructure deployments.",
+    features: [
+      "Rack servers, blades, storage, networking",
+      "Professional assembly & testing",
+      "White-glove delivery & installation",
+      "5-year warranty, 24/7 support",
+    ],
   },
   {
-    id: "block-storage",
-    title: "Block Storage",
-    subtitle: "From $4/TB",
-    description: "High-performance storage with instant provisioning and live resizing. Scale on demand.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
-    features: ["Redundant access", "Instant provisioning", "Live resizing", "2x replication"]
-  }
+    number: "04",
+    title: "IP Transit",
+    href: "/ip-transit",
+    description: "Premium carrier-diverse IP transit with guaranteed performance and global reach. Clean, DDoS-protected, or mixed — on 10GE, 40GE, or 100GE ports.",
+    features: [
+      "Clean: $100/Gbps at 95th percentile",
+      "DDoS Protected: $160/Gbps, no commit",
+      "10GE / 40GE / 100GE port options",
+      "Single and dual-port redundancy",
+    ],
+  },
 ];
 ---
 
-<section id="services" class="py-24 bg-gray-50 relative overflow-hidden">
-  <!-- Subtle background accent -->
-  <div class="absolute inset-0 opacity-[0.02]">
-    <div class="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-1/3 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
-  </div>
-  
-  <div class="container mx-auto px-6 relative z-10">
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-8 text-gray-900">
-        Everything you need.
-        <span class="block text-blue-500 mt-2">Nothing you don't.</span>
+<section id="services" class="relative py-24 md:py-32 bg-black overflow-hidden">
+  <!-- Background accents -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-primary-900/30 rounded-full blur-[140px] pointer-events-none"></div>
+
+  <div class="container mx-auto relative z-10">
+    <div class="max-w-3xl mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-white/10 bg-white/[0.03] text-xs font-medium text-white/70">
+        Our Services
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white tracking-tighter mb-6">
+        Four pillars. <span class="gradient-text italic">Zero compromises.</span>
       </h2>
-      <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        From $5 VMs to enterprise metal. No contracts, no setup fees, no surprises. 
-        Just infrastructure that works.
+      <p class="text-lg text-white/60 leading-relaxed">
+        Every layer of your stack, delivered from a single partner. No vendor sprawl, no finger-pointing, no surprises — just infrastructure that works the way you need it to.
       </p>
     </div>
-    
+
     <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {services.map((service) => (
-        <div class="group relative bg-white rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-300 overflow-hidden flex flex-col h-full hover:shadow-xl">
-          {service.highlight && (
-            <div class="absolute top-4 right-4">
-              <div class="bg-gray-900 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                Popular
-              </div>
-            </div>
-          )}
+        <a 
+          href={service.href}
+          class="group relative glass-card p-8 md:p-10 hover:border-primary-500/50 transition-all duration-300 overflow-hidden"
+        >
+          <!-- Hover gradient -->
+          <div class="absolute inset-0 bg-gradient-to-br from-primary-600/0 via-primary-600/0 to-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           
-          <div class="p-8 flex flex-col h-full">
-            <!-- Icon and Title -->
-            <div class="mb-6">
-              <div class="w-12 h-12 rounded-lg bg-gray-100 text-gray-700 flex items-center justify-center mb-4 group-hover:bg-gray-200 transition-colors duration-200" set:html={service.icon} />
-              <h3 class="text-xl font-bold text-gray-900 mb-1">{service.title}</h3>
-              <p class="text-base text-gray-600 font-semibold">{service.subtitle}</p>
+          <div class="relative z-10">
+            <div class="flex items-start justify-between mb-6">
+              <div class="font-mono text-sm text-primary-400 tracking-widest">{service.number}</div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white/30 group-hover:text-primary-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path>
+              </svg>
             </div>
-            
-            <!-- Description -->
-            <p class="text-gray-600 mb-6 flex-grow leading-relaxed">{service.description}</p>
-            
-            <!-- Features -->
-            <ul class="mb-6 space-y-2">
+
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">{service.title}</h3>
+            <p class="text-white/60 leading-relaxed mb-6">{service.description}</p>
+
+            <ul class="space-y-2.5">
               {service.features.map(feature => (
-                <li class="flex items-start gap-2">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-green-600 flex-shrink-0 mt-0.5">
-                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <li class="flex items-start gap-3 text-sm text-white/70">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary-400 mt-0.5 flex-shrink-0">
+                    <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span class="text-gray-600 text-sm">{feature}</span>
+                  <span>{feature}</span>
                 </li>
               ))}
             </ul>
-            
-            <!-- CTA -->
-            <div class="mt-auto">
-              <a 
-                href={
-                  service.id === 'cloud-compute' ? '/solutions/virtual-machines' : 
-                  service.id === 'dedicated-metal' ? '/solutions/dedicated-metal' :
-                  service.id === 'ddos-protection' ? '/solutions/ddos-protection' :
-                  service.id === 'colocation' ? '/solutions/colocation' :
-                  `/${service.id}`
-                } 
-                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-gray-50 text-gray-700 font-medium text-sm transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-              >
-                <span>Learn More About {service.title}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover:translate-x-0.5">
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   </div>

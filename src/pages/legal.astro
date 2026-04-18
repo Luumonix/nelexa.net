@@ -2,71 +2,59 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-// Get all legal documents
 const legalDocuments = await getCollection('legal');
-
-// Sort documents alphabetically by title
 legalDocuments.sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-// Format date function
 const formatDate = (date: Date) => {
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   });
 };
 ---
 
-<Layout title="Legal Documents">
-  <div class="bg-white">
-    <!-- Hero Section -->
-    <div class="bg-gradient-to-br from-primary-900 to-primary-800 text-white text-center pt-32 pb-12">
-      <div class="container">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">Legal Documents</h1>
-        <p class="text-xl max-w-3xl mx-auto leading-relaxed opacity-90">
-          Review all legal documents, policies, and terms that apply when using Charged IT Solutions LLC services. 
-          By using our services, you agree to these terms and policies.
+<Layout title="Legal | Nelexa" description="Review Nelexa's terms of service, privacy policy, service level agreement, and refund policy.">
+  <!-- Hero -->
+  <section class="relative pt-36 pb-16 bg-black overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-primary-800/25 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div class="container mx-auto relative z-10">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-white/10 bg-white/[0.03] text-xs font-medium text-white/70">
+          Legal
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold tracking-tighter text-white mb-6">
+          Legal documents.
+        </h1>
+        <p class="text-lg text-white/70 max-w-3xl leading-relaxed">
+          The fine print — policies and terms that apply when you use Nelexa services.
         </p>
       </div>
     </div>
+  </section>
 
-    <!-- Documents Grid -->
-    <div class="py-16 md:py-24 bg-white">
-      <div class="container">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {legalDocuments.map((document) => (
-            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-full flex flex-col border border-gray-200">
-              <div class="p-6 flex flex-col h-full">
-                <h2 class="text-2xl font-bold mb-3 text-primary-900">{document.data.title}</h2>
-                <p class="text-gray-500 mb-4 flex-grow">{document.data.description}</p>
-                <p class="text-sm text-gray-500 mb-4">Last updated: {formatDate(document.data.lastUpdated)}</p>
-                <a 
-                  href={`/${document.id.replace('legal/', '').replace('.md', '')}`} 
-                  class="inline-flex items-center text-secondary-500 font-semibold hover:text-accent-500 transition-colors duration-200 mt-auto group"
-                >
-                  Read Document
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    width="20" 
-                    height="20" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    stroke-width="2" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round"
-                    class="ml-2 transition-transform duration-200 group-hover:translate-x-1"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-              </div>
+  <!-- Documents -->
+  <section class="relative py-14 bg-black">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {legalDocuments.map((document) => (
+          <a
+            href={`/${document.id.replace('legal/', '').replace('.md', '')}`}
+            class="group glass-card p-8 hover:border-primary-500/50 transition-colors flex flex-col"
+          >
+            <h2 class="text-xl font-semibold text-white mb-3 group-hover:text-primary-200 transition-colors">{document.data.title}</h2>
+            <p class="text-sm text-white/60 leading-relaxed flex-grow mb-5">{document.data.description}</p>
+            <div class="flex items-center justify-between pt-4 border-t border-white/10">
+              <span class="text-xs text-white/40">Updated {formatDate(document.data.lastUpdated)}</span>
+              <span class="inline-flex items-center gap-1 text-sm text-primary-400 font-semibold group-hover:gap-2 transition-all">
+                Read
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </span>
             </div>
-          ))}
-        </div>
+          </a>
+        ))}
       </div>
     </div>
-  </div>
+  </section>
 </Layout>

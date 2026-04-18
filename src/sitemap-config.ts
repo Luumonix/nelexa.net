@@ -1,165 +1,90 @@
 // Sitemap configuration for enhanced SEO
 export const sitemapConfig = {
-  // Page-specific metadata
   pageMetadata: {
     '/': {
-      title: 'Charged IT Solutions - VPS Hosting, Dedicated Servers & Colocation',
-      description: 'Affordable VPS hosting starting at $5/mo. Enterprise cloud infrastructure, dedicated servers, colocation, and DDoS protection in Phoenix, Miami, Chicago & London datacenters.',
-      keywords: 'VPS hosting, cheap VPS, dedicated servers, colocation, DDoS protection, Phoenix datacenter, homelab VPS, developer VPS, small business hosting',
+      title: 'Nelexa — Enterprise Infrastructure Solutions',
+      description: 'Nelexa delivers dedicated servers, colocation, hardware solutions, and IP transit from our Dallas and New York data centers.',
+      keywords: 'dedicated servers, colocation, IP transit, hardware solutions, Dallas data center, New York data center, Nelexa',
       priority: 1.0,
-      changefreq: 'daily'
+      changefreq: 'weekly',
     },
-    '/solutions/colocation': {
-      title: 'Colocation Services - Phoenix Datacenter Starting at $70/mo',
-      description: 'Premium colocation services in Phoenix with redundant power, cooling, and network connectivity. 24/7 support included.',
-      keywords: 'Phoenix colocation, datacenter colocation, server hosting, rack space',
+    '/dedicated': {
+      title: 'Dedicated Servers — HPC & EVC Bare Metal | Nelexa',
+      description: 'HPC and EVC bare-metal dedicated servers in Dallas and New York with dual 10Gbps networking.',
+      keywords: 'dedicated servers, bare metal, HPC servers, AMD Ryzen 9950X, Intel Xeon Gold 6138, Dallas, NYC',
       priority: 0.9,
-      changefreq: 'weekly'
+      changefreq: 'weekly',
     },
-    '/solutions/ddos-protection': {
-      title: 'DDoS Protection - Enterprise-Grade Network Security',
-      description: 'Advanced DDoS protection with global scrubbing centers, real-time threat detection, and 24/7 monitoring.',
-      keywords: 'DDoS protection, network security, cyber security, threat mitigation',
+    '/colocation': {
+      title: 'Colocation — Dallas & New York | Nelexa',
+      description: 'Carrier-neutral colocation in Dallas and New York. 1U to full-rack with instant transparent pricing.',
+      keywords: 'colocation, Dallas colocation, NYC colocation, rack space, half rack, full rack',
       priority: 0.9,
-      changefreq: 'weekly'
+      changefreq: 'weekly',
     },
-    '/solutions/dedicated-metal': {
-      title: 'Dedicated Servers - High-Performance Bare Metal Solutions',
-      description: 'Enterprise-grade dedicated servers with customizable configurations, full root access, and 24/7 support.',
-      keywords: 'dedicated servers, bare metal servers, server hosting, dedicated hosting',
+    '/hardware': {
+      title: 'Hardware Solutions — Procurement & Lifecycle | Nelexa',
+      description: 'Custom server builds, enterprise procurement, and complete lifecycle management.',
+      keywords: 'hardware procurement, rack servers, blade systems, storage arrays, network equipment, custom builds',
       priority: 0.9,
-      changefreq: 'weekly'
+      changefreq: 'weekly',
     },
-    '/block-storage': {
-      title: 'Block Storage - Scalable Cloud Storage Solutions',
-      description: 'High-performance block storage with SSD and NVMe options. Scalable, redundant, and fully managed.',
-      keywords: 'block storage, cloud storage, SSD storage, NVMe storage',
+    '/ip-transit': {
+      title: 'IP Transit — Clean & DDoS Protected | Nelexa',
+      description: 'Carrier-diverse clean, DDoS-protected, and mixed IP transit on 10GE, 40GE, and 100GE ports.',
+      keywords: 'IP transit, clean transit, DDoS protected transit, BGP, peering, 10GE, 40GE, 100GE',
       priority: 0.9,
-      changefreq: 'weekly'
+      changefreq: 'weekly',
     },
-    '/managed-services': {
-      title: 'Managed IT Services - Expert Infrastructure Management',
-      description: 'Comprehensive managed services including monitoring, maintenance, security, and 24/7 technical support.',
-      keywords: 'managed IT services, infrastructure management, IT support, managed hosting',
-      priority: 0.9,
-      changefreq: 'weekly'
+    '/case-studies': {
+      title: 'Case Studies | Nelexa',
+      description: 'Real deployments, real outcomes from Nelexa customers.',
+      keywords: 'Nelexa case studies, Waterfall Technologies, Lagless.gg',
+      priority: 0.7,
+      changefreq: 'monthly',
     },
-    '/regions/phoenix': {
-      title: 'Phoenix Datacenter - Premium Colocation & Cloud Services',
-      description: 'State-of-the-art datacenter facility in Phoenix, Arizona with tier 3+ infrastructure and global connectivity.',
-      keywords: 'Phoenix datacenter, Arizona colocation, Phoenix cloud services',
+    '/contact': {
+      title: 'Contact Sales | Nelexa',
+      description: 'Talk to a real engineer about your infrastructure needs.',
+      keywords: 'contact Nelexa, sales, infrastructure quote',
       priority: 0.8,
-      changefreq: 'monthly'
+      changefreq: 'monthly',
     },
-    '/regions/chicago': {
-      title: 'Chicago Datacenter - Enterprise Infrastructure Solutions',
-      description: 'Premium datacenter services in Chicago with low-latency connectivity to major markets.',
-      keywords: 'Chicago datacenter, Illinois colocation, Chicago cloud services',
+    '/locations/dallas': {
+      title: 'Dallas, TX Data Center | Nelexa',
+      description: 'Nelexa Dallas: carrier-neutral data center in the DFW Metroplex.',
+      keywords: 'Dallas data center, DFW colocation, Texas hosting',
       priority: 0.8,
-      changefreq: 'monthly'
+      changefreq: 'monthly',
     },
-    '/regions/miami': {
-      title: 'Miami Datacenter - Gateway to Latin America',
-      description: 'Strategic datacenter location in Miami with excellent connectivity to Latin America and the Caribbean.',
-      keywords: 'Miami datacenter, Florida colocation, Latin America connectivity',
+    '/locations/new-york': {
+      title: 'New York, NY Data Center | Nelexa',
+      description: 'Nelexa New York: carrier-neutral data center in the NYC metro.',
+      keywords: 'New York data center, NYC colocation, Northeast hosting',
       priority: 0.8,
-      changefreq: 'monthly'
+      changefreq: 'monthly',
     },
-    '/regions/london': {
-      title: 'London Datacenter - European Cloud Infrastructure',
-      description: 'Enterprise datacenter services in London with premium connectivity across Europe.',
-      keywords: 'London datacenter, UK colocation, European cloud services',
-      priority: 0.8,
-      changefreq: 'monthly'
-    },
-    '/for-developers': {
-      title: 'VPS Hosting for Developers - Developer-Friendly Cloud Infrastructure',
-      description: 'Developer-focused VPS hosting with full root access, API integration, and pre-installed dev tools. Deploy Node.js, Python, Ruby, Go apps instantly.',
-      keywords: 'developer VPS, VPS for developers, developer hosting, cloud hosting for developers',
-      priority: 0.8,
-      changefreq: 'weekly'
-    },
-    '/for-homelabbers': {
-      title: 'Homelab Hosting - VPS & Colocation for Homelab Enthusiasts',
-      description: 'Professional hosting for homelabbers. Affordable VPS and colocation perfect for Proxmox, pfSense, TrueNAS, Docker, and more.',
-      keywords: 'homelab hosting, homelab VPS, homelab colocation, homelab server hosting',
-      priority: 0.8,
-      changefreq: 'weekly'
-    },
-    '/for-small-business': {
-      title: 'Small Business Hosting - Managed IT Solutions',
-      description: 'Enterprise-grade hosting for small businesses. Managed VPS, dedicated servers, DDoS protection, and 24/7 support.',
-      keywords: 'small business hosting, SMB hosting, business VPS, managed hosting small business',
-      priority: 0.8,
-      changefreq: 'weekly'
-    },
-    '/solutions/virtual-machines': {
-      title: 'VPS Hosting - Affordable Virtual Machines',
-      description: 'High-performance VPS hosting for developers and businesses. Linux & Windows VPS with SSD storage and DDoS protection.',
-      keywords: 'VPS hosting, virtual private server, cloud VPS, Linux VPS, Windows VPS',
-      priority: 0.9,
-      changefreq: 'weekly'
-    }
   },
-  
-  // Image sitemap entries (for better image SEO)
-  images: [
-    {
-      loc: '/img/365dc_bc1.png',
-      title: '365 Data Centers Phoenix Facility',
-      caption: 'Our primary datacenter facility in Phoenix, Arizona'
-    },
-    {
-      loc: '/img/equinix_ch3.jpg',
-      title: 'Equinix Chicago CH3 Datacenter',
-      caption: 'Premium colocation space at Equinix Chicago'
-    },
-    {
-      loc: '/img/equinix_ch4.jpg',
-      title: 'Equinix Chicago CH4 Datacenter',
-      caption: 'Additional capacity at Equinix Chicago CH4'
-    },
-    {
-      loc: '/img/telehouse_london.jpg',
-      title: 'Telehouse London Datacenter',
-      caption: 'European presence at Telehouse London'
-    },
-    {
-      loc: '/img/miami_florida.jpg',
-      title: 'Miami Datacenter Facility',
-      caption: 'Strategic location in Miami for Latin American connectivity'
-    }
-  ],
-  
-  // Additional sitemap options
+
+  images: [] as { loc: string; title: string; caption: string }[],
+
   options: {
-    // Exclude patterns (pages that shouldn't be in sitemap)
-    exclude: [
-      '/api/*',
-      '/admin/*',
-      '/_*',
-      '/404',
-      '/500'
-    ],
-    
-    // Custom namespace for additional features
+    exclude: ['/api/*', '/admin/*', '/_*', '/404', '/500'],
     xmlns: {
       news: false,
       xhtml: true,
       image: true,
-      video: false
-    }
-  }
+      video: false,
+    },
+  },
 };
 
-// Helper function to get metadata for a specific page
 export function getPageMetadata(pathname: string) {
   return (sitemapConfig.pageMetadata as Record<string, any>)[pathname] || {};
 }
 
-// Helper function to check if a URL should be excluded
 export function shouldExclude(url: string): boolean {
-  return sitemapConfig.options.exclude.some(pattern => {
+  return sitemapConfig.options.exclude.some((pattern) => {
     if (pattern.endsWith('*')) {
       return url.startsWith(pattern.slice(0, -1));
     }

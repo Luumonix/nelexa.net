@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const ports = [
+  { port: "1 × 10GE",  setup: 50,  monthly: 15, capacity: "10 Gbps" },
+  { port: "2 × 10GE",  setup: 75,  monthly: 20, capacity: "20 Gbps" },
+  { port: "1 × 40GE",  setup: 180, monthly: 20, capacity: "40 Gbps" },
+  { port: "2 × 40GE",  setup: 320, monthly: 30, capacity: "80 Gbps" },
+  { port: "1 × 100GE", setup: 400, monthly: 30, capacity: "100 Gbps" },
+  { port: "2 × 100GE", setup: 700, monthly: 45, capacity: "200 Gbps" },
+];
+
+const bandwidth = [
+  { type: "Clean Transit",       rate: "$100/Gbps",  billing: "95th percentile", minCommit: "10% single / 5% dual port" },
+  { type: "DDoS Protected",      rate: "$160/Gbps",  billing: "95th percentile", minCommit: "None" },
+  { type: "Mixed (Clean + DDoS)",rate: "Varies",     billing: "95th percentile", minCommit: "None" },
+];
+---
+
+<Layout
+  title="IP Transit | Nelexa"
+  description="Premium IP transit services with guaranteed performance, low latency, and global reach through our carrier-diverse network. Clean, DDoS protected, and mixed transit on 10GE, 40GE, and 100GE ports."
+  structuredData={{ type: 'service', data: { service: { type: 'IP Transit', name: 'Nelexa IP Transit', description: 'Clean, DDoS-protected, and mixed IP transit.' } } }}
+>
+  <!-- Hero -->
+  <section class="relative pt-36 pb-16 bg-black overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-primary-800/25 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div class="container mx-auto relative z-10">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-white/10 bg-white/[0.03] text-xs font-medium text-white/70">
+          IP Transit
+        </div>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-6">
+          Bandwidth. <span class="gradient-text italic">Delivered clean.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed">
+          Premium IP transit with guaranteed performance, low latency, and global reach through our carrier-diverse network. Clean, DDoS-protected, or mixed — on 10GE, 40GE, or 100GE ports.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="relative py-16 bg-black">
+    <div class="container mx-auto">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tighter text-white mb-3">Pricing Overview</h2>
+        <p class="text-white/60">Straightforward pricing. No hidden fees. No commits on protected bandwidth.</p>
+      </div>
+
+      <!-- Port Configuration Table -->
+      <div class="glass-card overflow-hidden mb-8">
+        <div class="px-6 py-5 border-b border-white/10 flex items-center justify-between">
+          <h3 class="text-lg font-semibold text-white">Port Configuration</h3>
+          <span class="text-xs text-white/50">Dallas & New York</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-white/10 bg-white/[0.02]">
+                <th class="text-left px-6 py-3 font-semibold text-white/70 uppercase tracking-wider text-xs">Port Type</th>
+                <th class="text-left px-6 py-3 font-semibold text-white/70 uppercase tracking-wider text-xs">Setup Fee</th>
+                <th class="text-left px-6 py-3 font-semibold text-white/70 uppercase tracking-wider text-xs">Monthly Fee</th>
+                <th class="text-left px-6 py-3 font-semibold text-white/70 uppercase tracking-wider text-xs">Capacity</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ports.map((p, i) => (
+                <tr class:list={["hover:bg-white/[0.02] transition-colors", i < ports.length - 1 && "border-b border-white/5"]}>
+                  <td class="px-6 py-4 font-semibold text-white">{p.port}</td>
+                  <td class="px-6 py-4 text-white/70">${p.setup}</td>
+                  <td class="px-6 py-4 text-white/70">${p.monthly}/mo</td>
+                  <td class="px-6 py-4 text-primary-300 font-medium">{p.capacity}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Bandwidth Pricing Table -->
+      <div class="glass-card overflow-hidden">
+        <div class="px-6 py-5 border-b border-white/10">
+          <h3 class="text-lg font-semibold text-white">Bandwidth Pricing</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-white/10 bg-white/[0.02]">
+                <th class="text-left px-6 py-3 font-semibold text-white/70 uppercase tracking-wider text-xs">Transit Type</th>
+                <th class="text-left px-6 py-3 font-semibold text-white/70 uppercase tracking-wider text-xs">Rate</th>
+                <th class="text-left px-6 py-3 font-semibold text-white/70 uppercase tracking-wider text-xs">Billing</th>
+                <th class="text-left px-6 py-3 font-semibold text-white/70 uppercase tracking-wider text-xs">Min Commit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {bandwidth.map((b, i) => (
+                <tr class:list={["hover:bg-white/[0.02] transition-colors", i < bandwidth.length - 1 && "border-b border-white/5"]}>
+                  <td class="px-6 py-4 font-semibold text-white">{b.type}</td>
+                  <td class="px-6 py-4 text-primary-300 font-medium">{b.rate}</td>
+                  <td class="px-6 py-4 text-white/70">{b.billing}</td>
+                  <td class="px-6 py-4 text-white/70">{b.minCommit}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="relative py-16 bg-black border-t border-white/5">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="glass-card p-8">
+          <div class="w-11 h-11 rounded-lg bg-primary-600/20 border border-primary-500/30 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-300"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Carrier-Diverse</h3>
+          <p class="text-sm text-white/60 leading-relaxed">Tier-1 blends from multiple carriers — no single-provider lock-in, always a backup path.</p>
+        </div>
+
+        <div class="glass-card p-8">
+          <div class="w-11 h-11 rounded-lg bg-primary-600/20 border border-primary-500/30 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-300"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Always-On DDoS</h3>
+          <p class="text-sm text-white/60 leading-relaxed">Protected transit includes automated L3–L7 mitigation at the edge — no GRE, no asymmetric routing.</p>
+        </div>
+
+        <div class="glass-card p-8">
+          <div class="w-11 h-11 rounded-lg bg-primary-600/20 border border-primary-500/30 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-300"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Mix & Match</h3>
+          <p class="text-sm text-white/60 leading-relaxed">Run clean and protected on the same port. Pay only for what each workload needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 bg-black">
+    <div class="container mx-auto">
+      <div class="relative glass-card overflow-hidden p-10 md:p-14 text-center">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-600/15 to-accent-700/10"></div>
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tighter text-white mb-4">Ready to plug in?</h2>
+          <p class="text-lg text-white/70 mb-8 max-w-2xl mx-auto">Volume pricing, peering, custom LOAs — tell us what you're building and we'll scope the port.</p>
+          <a href="/contact?type=ip-transit" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-lg transition-colors shadow-xl shadow-primary-900/40">
+            Contact Sales
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -10,44 +10,20 @@ const { type = 'organization', data } = Astro.props;
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Charged IT Solutions LLC",
-  "alternateName": "Charged IT Solutions",
-  "url": "https://chargeditsolutions.com",
-  "logo": "https://chargeditsolutions.com/android-chrome-512x512.png",
-  "description": "Enterprise-grade cloud infrastructure, colocation, DDoS protection, and managed services provider with datacenters in Phoenix, Miami, Chicago, and London.",
-  "foundingDate": "2023",
-  "founders": [
-    {
-      "@type": "Person",
-      "name": "Zachary Dumas"
-    },
-    {
-      "@type": "Person",
-      "name": "Ishmeet Thethi"
-    }
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "14853 N 100th Pl",
-    "addressLocality": "Scottsdale",
-    "addressRegion": "AZ",
-    "postalCode": "85260",
-    "addressCountry": "US"
-  },
+  "name": "Nelexa, Inc.",
+  "alternateName": "Nelexa",
+  "url": "https://nelexa.net",
+  "logo": "https://nelexa.net/android-chrome-512x512.png",
+  "description": "Enterprise-grade dedicated servers, colocation, IP transit, and hardware solutions with data centers in Dallas and New York.",
   "sameAs": [
-    "https://x.com/cits_llc",
-    "https://www.linkedin.com/company/charged-it-solutions-llc",
-    "https://github.com/chargeditsolutionsllc",
-    "https://discord.chargeditsolutions.com"
+    "https://discord.gg/nelexa"
   ],
   "contactPoint": [{
     "@type": "ContactPoint",
-    "contactType": "customer support",
-    "telephone": "+1-480-863-1188",
-    "email": "support@chargeditsolutions.com",
+    "contactType": "sales",
+    "email": "sales@nelexa.net",
     "availableLanguage": ["en"],
-    "areaServed": ["US", "GB", "Worldwide"],
-    "contactOption": ["TollFree", "HearingImpairedSupported"]
+    "areaServed": ["US", "Worldwide"]
   }],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -55,77 +31,59 @@ const organizationSchema = {
     "itemListElement": [
       {
         "@type": "Service",
-        "name": "Virtual Private Servers (VPS)",
-        "description": "High-performance cloud VPS hosting and virtual machines starting at $5/month"
-      },
-      {
-        "@type": "Service",
         "name": "Dedicated Servers",
-        "description": "Bare metal dedicated servers with full root access"
+        "description": "High-performance bare-metal dedicated servers with AMD Ryzen and Intel Xeon configurations."
       },
       {
         "@type": "Service",
-        "name": "Colocation Services",
-        "description": "Datacenter colocation starting at $70/month"
+        "name": "Colocation",
+        "description": "1U to full-rack colocation in Dallas and New York with transparent instant quoting."
       },
       {
         "@type": "Service",
-        "name": "DDoS Protection",
-        "description": "Enterprise-grade DDoS protection and mitigation"
+        "name": "Hardware Solutions",
+        "description": "Custom server builds, enterprise procurement, and complete lifecycle management."
+      },
+      {
+        "@type": "Service",
+        "name": "IP Transit",
+        "description": "Clean, DDoS-protected, and mixed IP transit with carrier-diverse global reach."
       }
     ]
   }
 };
 
-// Service Schema
 const serviceSchema = data?.service ? {
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": data.service.type,
   "provider": {
     "@type": "Organization",
-    "name": "Charged IT Solutions LLC"
+    "name": "Nelexa, Inc."
   },
   "name": data.service.name,
   "description": data.service.description,
-  "areaServed": data.service.areaServed || ["US", "GB", "Worldwide"],
-  "hasOfferCatalog": data.service.offers ? {
-    "@type": "OfferCatalog",
-    "name": data.service.name + " Plans",
-    "itemListElement": data.service.offers
-  } : undefined
+  "areaServed": data.service.areaServed || ["US", "Worldwide"]
 } : null;
 
-// Local Business Schema for datacenter locations
 const localBusinessSchema = data?.location ? {
   "@context": "https://schema.org",
   "@type": "DataCenter",
-  "name": `Charged IT Solutions - ${data.location.city} Datacenter`,
+  "name": `Nelexa — ${data.location.city} Data Center`,
   "parentOrganization": {
     "@type": "Organization",
-    "name": "Charged IT Solutions LLC"
+    "name": "Nelexa, Inc."
   },
   "address": {
     "@type": "PostalAddress",
     "addressLocality": data.location.city,
     "addressRegion": data.location.state,
-    "addressCountry": data.location.country,
-    "postalCode": data.location.postalCode
+    "addressCountry": data.location.country || "US"
   },
-  "geo": data.location.coordinates ? {
-    "@type": "GeoCoordinates",
-    "latitude": data.location.coordinates.lat,
-    "longitude": data.location.coordinates.lng
-  } : undefined,
   "description": data.location.description,
-  "telephone": "+1-800-CHARGED",
-  "url": `https://chargeditsolutions.com/regions/${data.location.slug}`,
-  "image": data.location.image,
-  "priceRange": "$$"
+  "url": `https://nelexa.net/locations/${data.location.slug}`
 } : null;
 
-
-// Breadcrumb Schema
 const breadcrumbSchema = data?.breadcrumbs ? {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -137,7 +95,6 @@ const breadcrumbSchema = data?.breadcrumbs ? {
   }))
 } : null;
 
-// Select the appropriate schema based on type
 let selectedSchema;
 switch (type) {
   case 'service':

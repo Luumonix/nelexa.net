@@ -1,11 +1,11 @@
 ---
 title: "Refund Policy"
-description: "Charged IT Solutions Refund Policy - Our guidelines for refunds and service cancellations."
+description: "Nelexa Refund Policy - Our guidelines for refunds and service cancellations."
 lastUpdated: 2025-03-05
 ---
 ## 1. INTRODUCTION
 
-This Refund Policy ("Policy") governs all refunds and credits issued by Charged IT Solutions LLC ("Company," "we," "us," or "our") relating to our cloud compute services, dedicated servers, managed services, and DDoS protection solutions (collectively, the "Services"). By purchasing or using any of our Services, you ("Customer," "you," or "your") agree to be bound by this Policy.
+This Refund Policy ("Policy") governs all refunds and credits issued by Nelexa, Inc. ("Company," "we," "us," or "our") relating to our cloud compute services, dedicated servers, managed services, and DDoS protection solutions (collectively, the "Services"). By purchasing or using any of our Services, you ("Customer," "you," or "your") agree to be bound by this Policy.
 
 ## 2. DEFINITIONS
 
@@ -121,7 +121,7 @@ The Company shall not be obligated to provide refunds for service interruptions 
 
 6.1. **Submission Requirements**. All refund requests must:
    
-   (a) Be submitted in writing to billing@chargeditsolutions.com or through the customer portal;
+   (a) Be submitted in writing to billing@nelexa.net or through the customer portal;
    
    (b) Include your account information, the specific Service for which a refund is requested, the date of purchase, and the reason for the refund request;
    

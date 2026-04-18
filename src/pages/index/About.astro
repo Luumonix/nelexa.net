@@ -1,94 +1,82 @@
 ---
-// Frontmatter section for Astro component
 ---
 
-<section id="about" class="py-24 bg-white relative overflow-hidden">
-  <!-- Subtle background accent -->
-  <div class="absolute inset-0 opacity-[0.02]">
-    <div class="absolute top-1/2 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl transform -translate-x-1/2"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500 rounded-full blur-3xl transform translate-x-1/2"></div>
-  </div>
-  
-  <div class="container mx-auto px-6 relative z-10">
-    <!-- Main Content -->
-    <div class="max-w-5xl mx-auto">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-8 text-gray-900">
-          Built by engineers.
-          <span class="block text-blue-500 mt-2">Run by humans.</span>
+<section id="about" class="relative py-24 md:py-32 bg-black overflow-hidden border-t border-white/5">
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent-700/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="container mx-auto relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-white/10 bg-white/[0.03] text-xs font-medium text-white/70">
+          About Nelexa
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold font-heading text-white tracking-tighter mb-6">
+          One partner. <span class="gradient-text italic">Every layer.</span>
         </h2>
-        
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Look, we've all been there. 3am, site's down, and you're on hold with support for 2 hours. Or worse—getting passed between 'specialists' who are just reading from scripts. We started Charged IT Solutions because we were tired of watching good companies get screwed by hosting that costs too much and delivers too little.
+        <p class="text-lg text-white/70 leading-relaxed mb-6">
+          Nelexa is an enterprise infrastructure company built on a simple idea: the people who source your hardware, the people who rack it, and the people who keep the network humming should all work for the same team.
         </p>
-      </div>
-      
-      <!-- Stats Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-        <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">99.99%</div>
-          <div class="text-sm text-gray-600">Uptime SLA</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">15min</div>
-          <div class="text-sm text-gray-600">Avg Response Time</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">24/7</div>
-          <div class="text-sm text-gray-600">Real Support</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">50%</div>
-          <div class="text-sm text-gray-600">Less Than AWS</div>
+        <p class="text-white/60 leading-relaxed mb-8">
+          That's how we operate — from procurement and assembly, to colocation and IP transit, to dedicated server deployments in Dallas and New York. No handoffs, no finger-pointing, no gaps. Just senior engineers who answer the phone and infrastructure that stays up.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a href="/case-studies" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white text-sm font-medium rounded-lg transition-colors">
+            Read Case Studies
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+          <a href="/contact" class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold rounded-lg transition-colors">
+            Talk to Sales
+          </a>
         </div>
       </div>
-      
-      <!-- Value Props -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Direct Support -->
-        <div class="group">
-          <div class="bg-gray-50 rounded-xl p-8 h-full transition-all duration-300 hover:bg-blue-50 hover:shadow-lg">
-            <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors">
-              <svg class="w-7 h-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Direct Access</h3>
-            <p class="text-gray-600 leading-relaxed">
-              No tickets, no tiers. Direct access to the engineers who built your infrastructure. We answer in minutes, not days.
-            </p>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="glass-card p-6">
+          <div class="w-11 h-11 rounded-lg bg-primary-600/20 border border-primary-500/30 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-300">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
           </div>
+          <h3 class="text-lg font-semibold text-white mb-2">Mission-Critical</h3>
+          <p class="text-sm text-white/60 leading-relaxed">Engineered for workloads where downtime costs real money.</p>
         </div>
-        
-        <!-- Transparent Pricing -->
-        <div class="group">
-          <div class="bg-gray-50 rounded-xl p-8 h-full transition-all duration-300 hover:bg-blue-50 hover:shadow-lg">
-            <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors">
-              <svg class="w-7 h-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Clear Pricing</h3>
-            <p class="text-gray-600 leading-relaxed">
-              No hidden fees, no surprise bills. What you see is what you pay. Simple pricing that scales with your business.
-            </p>
+
+        <div class="glass-card p-6">
+          <div class="w-11 h-11 rounded-lg bg-primary-600/20 border border-primary-500/30 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-300">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
           </div>
+          <h3 class="text-lg font-semibold text-white mb-2">Full Stack</h3>
+          <p class="text-sm text-white/60 leading-relaxed">Hardware, colocation, networking — one team, one invoice.</p>
         </div>
-        
-        <!-- Enterprise Grade -->
-        <div class="group">
-          <div class="bg-gray-50 rounded-xl p-8 h-full transition-all duration-300 hover:bg-blue-50 hover:shadow-lg">
-            <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors">
-              <svg class="w-7 h-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise Ready</h3>
-            <p class="text-gray-600 leading-relaxed">
-              Tier III+ datacenters, redundant everything, and security that passes compliance audits. Built for business.
-            </p>
+
+        <div class="glass-card p-6">
+          <div class="w-11 h-11 rounded-lg bg-primary-600/20 border border-primary-500/30 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-300">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
           </div>
+          <h3 class="text-lg font-semibold text-white mb-2">US Coverage</h3>
+          <p class="text-sm text-white/60 leading-relaxed">Dallas and New York facilities on a carrier-diverse backbone.</p>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="w-11 h-11 rounded-lg bg-primary-600/20 border border-primary-500/30 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-300">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="6" y1="1" x2="6" y2="4"></line>
+              <line x1="10" y1="1" x2="10" y2="4"></line>
+              <line x1="14" y1="1" x2="14" y2="4"></line>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">Senior-Only</h3>
+          <p class="text-sm text-white/60 leading-relaxed">Real engineers on the phone — never a script, never a tier-1.</p>
         </div>
       </div>
     </div>

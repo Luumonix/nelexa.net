@@ -16,10 +16,10 @@ interface Props {
 const { title, lastUpdated, headings } = Astro.props;
 ---
 
-<div class="bg-white">
+<div class="bg-black min-h-screen">
   <LegalHeader title={title} lastUpdated={lastUpdated} />
   
-  <div class="container">
+  <div class="container mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 relative mt-6">
       <aside class="relative">
         <TableOfContents headings={headings} />

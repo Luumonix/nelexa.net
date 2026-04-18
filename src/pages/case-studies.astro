@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const caseStudies = [
+  {
+    slug: "waterfall-technologies",
+    title: "Waterfall Technologies LTD: Establishing U.S. Presence Seamlessly",
+    description: "How Nelexa enabled Waterfall Technologies LTD to establish their U.S. presence with seamless hardware procurement, assembly, and installation services.",
+    client: "Waterfall Technologies LTD",
+    date: "January 20, 2024",
+    readTime: "4 min read",
+    tags: ["Hardware Procurement", "Assembly & Testing", "Delivery & Installation"],
+  },
+  {
+    slug: "lagless-gg",
+    title: "Lagless.gg: Reliable Gaming Infrastructure",
+    description: "How Nelexa provided hardware, colocation, and networking solutions for Lagless.gg's gaming servers.",
+    client: "Lagless.gg",
+    date: "January 15, 2024",
+    readTime: "3 min read",
+    tags: ["Colocation", "IP Transit", "Hardware Solutions"],
+  },
+];
+---
+
+<Layout
+  title="Case Studies | Nelexa"
+  description="Real deployments, real outcomes. See how Nelexa partners with customers to deliver infrastructure from procurement to production."
+>
+  <!-- Hero -->
+  <section class="relative pt-36 pb-16 bg-black overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-primary-800/25 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div class="container mx-auto relative z-10">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-white/10 bg-white/[0.03] text-xs font-medium text-white/70">
+          Case Studies
+        </div>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-6">
+          Real deployments. <span class="gradient-text italic">Real outcomes.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed">
+          See how we partner with customers to deliver infrastructure from procurement to production — no hand-waving, no stock photos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section class="relative py-16 bg-black">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {caseStudies.map(cs => (
+          <a href={`/case-studies/${cs.slug}`} class="group glass-card p-8 md:p-10 hover:border-primary-500/50 transition-colors">
+            <div class="flex flex-wrap gap-2 mb-5">
+              {cs.tags.map(t => (
+                <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-300 text-[11px] font-medium uppercase tracking-wider">{t}</span>
+              ))}
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight group-hover:text-primary-200 transition-colors">{cs.title}</h2>
+            <p class="text-white/60 leading-relaxed mb-6">{cs.description}</p>
+            <div class="flex items-center justify-between pt-5 border-t border-white/10">
+              <div class="text-sm">
+                <div class="text-white font-semibold">{cs.client}</div>
+                <div class="text-white/40 text-xs mt-0.5">{cs.date} · {cs.readTime}</div>
+              </div>
+              <span class="inline-flex items-center gap-1.5 text-sm text-primary-400 font-semibold group-hover:gap-2.5 transition-all">
+                Read
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

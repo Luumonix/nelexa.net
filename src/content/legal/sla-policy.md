@@ -1,13 +1,13 @@
 ---
 title: "SLA Policy"
-description: "Charged IT Solutions Service Level Agreement - Our commitment to service availability and performance."
+description: "Nelexa Service Level Agreement - Our commitment to service availability and performance."
 lastUpdated: 2025-08-05
 ---
 ## 1. INTRODUCTION
 
 ### 1.1 Purpose and Scope
 
-This Service Level Agreement ("Agreement" or "SLA") is entered into by and between Charged IT Solutions LLC ("Provider," "Company," "we," "us," or "our"), a limited liability company organized under the laws of Arizona, with its principal place of business at 14853 N 100th Pl, Scottsdale, AZ 85260 USA, and the client or customer ("Client," "Customer," "you," or "your") who has purchased or subscribed to our services as defined herein.
+This Service Level Agreement ("Agreement" or "SLA") is entered into by and between Nelexa, Inc. ("Provider," "Company," "we," "us," or "our"), a corporation, with its principal place of business at Dallas, TX and New York, NY USA, and the client or customer ("Client," "Customer," "you," or "your") who has purchased or subscribed to our services as defined herein.
 
 This Agreement sets forth the terms and conditions under which Provider will deliver and maintain the Services, including but not limited to cloud computing services, dedicated server solutions, managed services, and distributed denial of service ("DDoS") protection services (collectively, the "Services"). This Agreement establishes the expected level of service performance, availability, reliability, responsibilities, and remedies.
 
@@ -169,7 +169,7 @@ To receive Service Credits, Customer must:
 
 1. Submit a request within thirty (30) days of the end of the calendar month in which the failure to meet Service Level Objectives occurred.
 2. Provide documented evidence of the Service Level Objective failure.
-3. Submit the request via the Provider's ticketing system or by emailing [support@chargedit.com].
+3. Submit the request via the Provider's ticketing system or by emailing [support@nelexa.net].
 
 Provider will review Service Credit requests and respond within fifteen (15) business days. If approved, Service Credits will be applied to Customer's account within thirty (30) days of approval.
 
