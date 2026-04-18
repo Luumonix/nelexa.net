@@ -1,0 +1,77 @@
+---
+import { Button } from '@/components/ui/button';
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+  <!-- Fluid wave background -->
+  <div class="absolute inset-0">
+    <!-- Base gradient -->
+    <div class="absolute inset-0 bg-gradient-to-b from-blue-950/15 via-slate-950 to-black"></div>
+    
+    <!-- Animated waves -->
+    <svg class="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 800">
+      <defs>
+        <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e40af;stop-opacity:0.25" />
+          <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0.1" />
+        </linearGradient>
+      </defs>
+      
+      <!-- Wave 1 -->
+      <path 
+        d="M0,400 C480,300 960,500 1440,400 L1440,800 L0,800 Z" 
+        fill="url(#wave-gradient)"
+        opacity="0.4"
+      />
+      
+      <!-- Wave 2 -->
+      <path 
+        d="M0,500 C320,400 640,600 960,500 C1280,400 1440,550 1440,550 L1440,800 L0,800 Z" 
+        fill="url(#wave-gradient)"
+        opacity="0.3"
+      />
+      
+      <!-- Wave 3 -->
+      <path 
+        d="M0,600 C240,550 480,650 720,600 C960,550 1200,650 1440,600 L1440,800 L0,800 Z" 
+        fill="url(#wave-gradient)"
+        opacity="0.2"
+      />
+    </svg>
+  </div>
+  
+  <!-- Content -->
+  <div class="container relative z-10 px-6 md:px-12 lg:px-16 xl:px-24 mx-auto">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Main Heading -->
+      <h1 class="text-5xl md:text-5xl lg:text-7xl xl:text-7.5xl font-bold font-heading text-white mb-8">
+        Scale Fast. Pay Less.
+        <span class="block italic text-white-400">
+          Sleep Better.
+        </span>
+      </h1>
+      
+      <!-- Subtitle -->
+      <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
+        Where everyone from developers to enterprises build unstoppable infrastructure. Global reach, bulletproof security, and experts who answer on the first ring—at half the cost of the big guys.
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="https://client.chargeditsolutions.com/store" 
+          class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-gray-900 font-semibold text-lg rounded-lg transition-all duration-300 hover:bg-gray-100 transform hover:scale-[1.02]"
+        >
+          <span>Schedule a Consultation</span>
+        </a>
+        
+        <a 
+          href="#services" 
+          class="group inline-flex items-center justify-center gap-3 px-8 py-4 text-white font-semibold text-lg rounded-lg border-2 border-white/20 transition-all duration-300 hover:bg-white/10 hover:border-white/40"
+        >
+          <span>Or Scroll Down ↓</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import RegionOverview from '@/components/regions/RegionOverview.astro';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs.astro';
+import { getRegionBySlug } from '@/data/regions';
+
+const region = getRegionBySlug('london');
+
+if (!region) {
+  return Astro.redirect('/404');
+}
+
+const locationData = {
+  city: "London",
+  state: "England",
+  country: "GB",
+  postalCode: "E14 9SZ",
+  slug: "london",
+  coordinates: {
+    lat: 51.5074,
+    lng: -0.1278
+  },
+  description: "Leading London datacenter providing VPS hosting, dedicated servers, colocation, and managed services. GDPR compliant infrastructure perfect for UK businesses and European connectivity.",
+  image: region.hero.image
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Regions', url: '/regions' },
+  { name: 'London', url: '/regions/london' }
+];
+---
+
+<Layout 
+  title={`London VPS & Colocation - ${region.facility} Datacenter | Charged IT Solutions`}
+  description="London datacenter offering VPS from £4/mo, dedicated servers, and colocation starting at £55/mo. Located at Telehouse North with 40MW capacity. GDPR compliant hosting for UK and European businesses."
+  keywords="London VPS, London colocation, London datacenter, London dedicated servers, London managed services, London cloud hosting, London web hosting, UK VPS, UK colocation, London IT services, London disaster recovery, London DDoS protection, Telehouse London, London server hosting, UK hosting, GDPR compliant hosting"
+  structuredData={{
+    type: 'localbusiness',
+    data: { location: locationData }
+  }}
+>
+  <RegionOverview region={region} breadcrumbs={breadcrumbs} />
+</Layout>

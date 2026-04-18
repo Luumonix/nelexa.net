@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LegalLayout from '../components/legal/LegalLayout.astro';
+import { getEntry } from 'astro:content';
+
+// Get the SLA policy content
+const entry = await getEntry('legal', 'sla-policy');
+if (!entry) throw new Error('SLA Policy not found');
+
+const { Content, headings } = await entry.render();
+
+// Format the date
+const formattedDate = entry.data.lastUpdated;
+---
+
+<Layout title={entry.data.title}>
+  <LegalLayout
+    title={entry.data.title}
+    lastUpdated={formattedDate}
+    headings={headings}
+  >
+    <Content />
+  </LegalLayout>
+</Layout>

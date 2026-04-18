@@ -1,0 +1,85 @@
+---
+// No props needed, using slots instead
+---
+
+<div class="pb-16 md:pb-24">
+  <div class="w-full">
+    <slot />
+  </div>
+</div>
+
+<style>
+  /* Style for the rendered Markdown content */
+  :global(.pb-16 h2:first-child) {
+    margin-top: 0;
+  }
+  
+  :global(.pb-16 h2) {
+    @apply text-2xl md:text-3xl font-bold mt-12 mb-4 pb-2 border-b border-gray-200 text-primary-900;
+    scroll-margin-top: 100px;
+  }
+
+  :global(.pb-16 h3) {
+    @apply text-xl md:text-2xl font-bold mt-8 mb-3 text-primary-900;
+    scroll-margin-top: 100px;
+  }
+
+  :global(.pb-16 h4) {
+    @apply text-lg md:text-xl font-bold mt-6 mb-2 text-primary-900;
+    scroll-margin-top: 100px;
+  }
+
+  :global(.pb-16 p) {
+    @apply mb-4 leading-relaxed;
+  }
+
+  :global(.pb-16 ul),
+  :global(.pb-16 ol) {
+    @apply mb-6 pl-6;
+  }
+
+  :global(.pb-16 li) {
+    @apply mb-2;
+  }
+
+  :global(.pb-16 a) {
+    @apply text-secondary-500 no-underline border-b border-transparent transition-colors duration-200 hover:border-secondary-500;
+  }
+
+  :global(.pb-16 blockquote) {
+    @apply border-l-4 border-gray-300 pl-4 ml-0 mr-0 italic text-gray-500;
+  }
+
+  :global(.pb-16 table) {
+    @apply w-full border-collapse mb-6;
+  }
+
+  :global(.pb-16 th),
+  :global(.pb-16 td) {
+    @apply p-3 border border-gray-300 text-left;
+  }
+
+  :global(.pb-16 th) {
+    @apply bg-gray-100 font-semibold;
+  }
+
+  :global(.pb-16 tr:nth-child(even)) {
+    @apply bg-gray-100;
+  }
+
+  :global(.pb-16 code) {
+    @apply bg-gray-100 px-1 py-0.5 rounded text-sm font-mono;
+  }
+
+  :global(.pb-16 pre) {
+    @apply bg-gray-100 p-4 rounded-md overflow-x-auto mb-6;
+  }
+
+  :global(.pb-16 pre code) {
+    @apply bg-transparent p-0 rounded-none;
+  }
+
+  :global(.pb-16 hr) {
+    @apply border-0 h-px bg-gray-200 my-8;
+  }
+</style>

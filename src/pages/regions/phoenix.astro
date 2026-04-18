@@ -1,0 +1,44 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import RegionOverview from '@/components/regions/RegionOverview.astro';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs.astro';
+import { getRegionBySlug } from '@/data/regions';
+
+const region = getRegionBySlug('phoenix');
+
+if (!region) {
+  return Astro.redirect('/404');
+}
+
+const locationData = {
+  city: "Phoenix",
+  state: "AZ",
+  country: "US",
+  postalCode: "85009",
+  slug: "phoenix",
+  coordinates: {
+    lat: 33.4484,
+    lng: -112.0740
+  },
+  description: "Enterprise-grade datacenter in Phoenix offering VPS hosting, dedicated servers, colocation, and managed services. Perfect for businesses and individuals seeking reliable infrastructure in the Southwest.",
+  image: region.hero.image
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Regions', url: '/regions' },
+  { name: 'Phoenix', url: '/regions/phoenix' }
+];
+---
+
+<Layout 
+  title={`Phoenix VPS & Colocation - ${region.facility} Datacenter | Charged IT Solutions`}
+  description="Phoenix datacenter offering VPS from $5/mo, dedicated servers, and colocation starting at $70/mo. Located at Iron Mountain AZS-1 with 24/7 support. Perfect for Phoenix businesses and developers needing local hosting."
+  keywords="Phoenix VPS, Phoenix colocation, Phoenix datacenter, Phoenix dedicated servers, Phoenix managed services, Phoenix cloud hosting, Phoenix web hosting, Arizona VPS, Arizona colocation, Phoenix IT services, Phoenix disaster recovery, Phoenix DDoS protection, Iron Mountain Phoenix, Phoenix server hosting"
+  structuredData={{
+    type: 'localbusiness',
+    data: { location: locationData }
+  }}
+>
+  <RegionOverview region={region} breadcrumbs={breadcrumbs} />
+</Layout>

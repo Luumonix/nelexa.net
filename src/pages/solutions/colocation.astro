@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/colocation/Hero.astro';
+import Features from '../../components/colocation/Features.astro';
+import Locations from '../../components/colocation/Locations.astro';
+import CallToAction from '../../components/colocation/CallToAction.astro';
+import Breadcrumbs from '../../components/SEO/Breadcrumbs.astro';
+
+const serviceData = {
+	type: "Colocation Services",
+	name: "Datacenter Colocation",
+	description: "Premium colocation services with redundant power, cooling, and network connectivity in Phoenix, Miami, Chicago, and London datacenters. From 1U to full rack solutions."
+};
+
+const breadcrumbs = [
+	{ name: 'Home', url: '/' },
+	{ name: 'Solutions', url: '/solutions' },
+	{ name: 'Colocation', url: '/solutions/colocation' }
+];
+---
+
+<Layout 
+	title="Colocation Services - Secure Datacenter Space | Starting at $70/mo"
+	description="Your servers deserve a better home. Whether you're a homelab enthusiast outgrowing your closet or a business needing enterprise reliability - our colocation services provide the power, cooling, and connectivity your hardware needs. Starting at just $70/mo for 1U."
+	keywords="colocation, colocation services, datacenter colocation, server colocation, rack space, cabinet space, 1U colocation, quarter rack, half rack, full rack colocation, datacenter space, colocation hosting, colocation provider, homelab colocation, business colocation, Phoenix colocation, Miami colocation, Chicago colocation, London colocation, cheap colocation, affordable colocation, enterprise colocation, secure colocation, managed colocation"
+	structuredData={{
+		type: 'service',
+		data: { service: serviceData }
+	}}
+>
+	<Hero breadcrumbs={breadcrumbs} />
+	<Features />
+	<Locations />
+	<CallToAction />
+</Layout>

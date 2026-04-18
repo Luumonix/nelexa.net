@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from './index/Hero.astro';
+import Services from './index/Services.astro';
+import About from './index/About.astro';
+import CallToAction from './index/CallToAction.astro';
+---
+
+<Layout 
+	title="Charged IT Solutions | Real Infrastructure. Real Support. Real Simple."
+	description="Transform your digital ambitions into reality. Whether you're a developer crafting the next big app, a business scaling to new heights, or an enthusiast running your dream homelab - we provide the infrastructure that powers success. Enterprise-grade hosting starting at just $5/mo."
+	keywords="VPS hosting, cheap VPS, affordable VPS, developer VPS, homelab VPS, business VPS, personal VPS, dedicated servers, bare metal servers, colocation services, rack space, DDoS protection, Phoenix VPS, Miami VPS, Chicago VPS, London VPS, Phoenix colocation, Miami colocation, Chicago colocation, London colocation, Phoenix datacenter, Miami datacenter, Chicago datacenter, London datacenter, small business hosting, enterprise hosting, disaster recovery, AWS alternative, cloud migration, managed hosting, managed services Phoenix, managed services Miami, managed services Chicago, managed services London, DDoS mitigation, anti-DDoS, DDoS protection service, 480Gbps DDoS protection, game server DDoS protection, website DDoS protection, enterprise DDoS protection, affordable DDoS protection, DDoS attack protection, DDoS filtering, DDoS scrubbing, volumetric DDoS protection, layer 7 DDoS protection, always-on DDoS protection"
+	structuredData={{
+		type: 'organization'
+	}}
+>
+	<Hero />
+	<About />
+	<Services />
+	<CallToAction />
+</Layout>

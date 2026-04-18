@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/cloud-compute/Hero.astro';
+import Features from '../../components/cloud-compute/Features.astro';
+import PricingCalculator from '../../components/cloud-compute/PricingCalculator.astro';
+import CallToAction from '../../components/cloud-compute/CallToAction.astro';
+import Breadcrumbs from '../../components/SEO/Breadcrumbs.astro';
+
+const serviceData = {
+	type: "Cloud Computing Service",
+	name: "Virtual Private Servers (VPS)",
+	description: "High-performance VPS hosting perfect for developers, homelabbers, and businesses. Scalable resources, SSD storage, and full root access with 24/7 support."
+};
+
+const breadcrumbs = [
+	{ name: 'Home', url: '/' },
+	{ name: 'Solutions', url: '/solutions' },
+	{ name: 'Virtual Machines', url: '/solutions/virtual-machines' }
+];
+---
+
+<Layout 
+	title="VPS Hosting - Affordable Virtual Machines Starting at $5/mo | For Everyone"
+	description="Whether you're launching your first website, scaling a business, or running complex applications - our VPS hosting grows with you. From personal projects to enterprise workloads, get the power you need starting at just $5/mo with instant deployment and 24/7 expert support."
+	keywords="VPS hosting, cheap VPS, affordable VPS, personal VPS, business VPS, developer VPS, homelab VPS, student VPS, startup VPS, enterprise VPS, Linux VPS, Windows VPS, Ubuntu VPS, Debian VPS, CentOS VPS, virtual private server, cloud VPS, SSD VPS, NVMe VPS, managed VPS, unmanaged VPS, VPS server, VPS hosting Phoenix, VPS hosting Miami, VPS hosting Chicago, VPS hosting London, best VPS hosting, reliable VPS"
+	structuredData={{
+		type: 'service',
+		data: { service: serviceData }
+	}}
+>
+	<Hero breadcrumbs={breadcrumbs} />
+	<Features />
+	<PricingCalculator />
+	<CallToAction />
+</Layout>

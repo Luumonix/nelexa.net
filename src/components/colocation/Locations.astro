@@ -1,0 +1,89 @@
+---
+import { Image } from 'astro:assets';
+import phoenixImage from '@/assets/img/iron_mountain_phoenix_az.webp';
+import miamiImage from '@/assets/img/miami_florida.jpg';
+import chicagoImage from '@/assets/img/equinix_ch4.jpg';
+import londonImage from '@/assets/img/telehouse_london.jpg';
+
+const locations = [
+  {
+    name: "Phoenix, AZ",
+    facility: "Iron Mountain AZS-1",
+    image: phoenixImage,
+    href: "/regions/phoenix"
+  },
+  {
+    name: "Miami, FL",
+    facility: "365 Datacenters BC1",
+    image: miamiImage,
+    href: "/regions/miami"
+  },
+  {
+    name: "Chicago, IL",
+    facility: "Equinix CH4",
+    image: chicagoImage,
+    href: "/regions/chicago"
+  },
+  {
+    name: "London, UK",
+    facility: "Telehouse North",
+    image: londonImage,
+    href: "/regions/london"
+  }
+];
+---
+
+<section id="locations" class="py-24 bg-gray-50 relative overflow-hidden">
+  <!-- Subtle background accent -->
+  <div class="absolute inset-0 opacity-[0.02]">
+    <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Section header -->
+    <div class="text-center mb-16 max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-gray-900">
+        World-class datacenters.
+        <span class="block text-blue-500 mt-2">Strategic locations.</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Tier 3+ with redundant everything. 
+        Your equipment lives where it matters.
+      </p>
+    </div>
+    
+    <!-- Locations grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      {locations.map((location) => (
+        <a 
+          href={location.href}
+          class="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-300"
+        >
+          <div class="relative h-48 overflow-hidden bg-gray-100">
+            <Image 
+              src={location.image} 
+              alt={`${location.facility} datacenter`}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              width={1200}
+              height={900}
+              loading="lazy"
+              quality={95}
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">{location.name}</h3>
+            <p class="text-sm text-gray-600 mb-3">{location.facility}</p>
+            <div class="flex items-center text-blue-500 font-medium text-sm group-hover:text-blue-600 transition-colors">
+              <span>Learn more</span>
+              <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

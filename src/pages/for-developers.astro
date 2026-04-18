@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DeveloperHero from '../components/audience/DeveloperHero.astro';
+import DeveloperFeatures from '../components/audience/DeveloperFeatures.astro';
+import CallToAction from '../components/cloud-compute/CallToAction.astro';
+import Breadcrumbs from '../components/SEO/Breadcrumbs.astro';
+
+const breadcrumbs = [
+	{ name: 'Home', url: '/' },
+	{ name: 'For Developers', url: '/for-developers' }
+];
+
+const serviceData = {
+	type: "Cloud Infrastructure for Developers",
+	name: "Developer-Focused VPS & Cloud Solutions",
+	description: "VPS hosting and cloud infrastructure designed for developers. Full root access, API integration, CI/CD friendly, and developer tools pre-installed. Deploy your applications in seconds."
+};
+---
+
+<Layout 
+	title="VPS Hosting for Developers - Developer-Friendly Cloud Infrastructure | $5/mo"
+	description="Developer-focused VPS hosting with full root access, API integration, and pre-installed dev tools. Deploy Node.js, Python, Ruby, Go apps instantly. SSH access, Docker support, CI/CD ready. Starting at $5/month."
+	keywords="developer VPS, VPS for developers, developer hosting, cloud hosting for developers, developer cloud, Linux VPS developer, SSH VPS, Docker hosting, CI/CD hosting, Node.js hosting, Python hosting, developer server"
+	structuredData={{
+		type: 'service',
+		data: { service: serviceData }
+	}}
+>
+	<div class="container mx-auto px-4 pt-6">
+		<Breadcrumbs items={breadcrumbs} />
+	</div>
+	<DeveloperHero />
+	<DeveloperFeatures />
+	<CallToAction />
+</Layout>

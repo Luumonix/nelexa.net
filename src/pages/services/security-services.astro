@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComingSoon from '../../components/services/ComingSoon.astro';
+import Breadcrumbs from '../../components/SEO/Breadcrumbs.astro';
+
+const breadcrumbs = [
+	{ name: 'Home', url: '/' },
+	{ name: 'Services', url: '/services' },
+	{ name: 'Security Services', url: '/services/security-services' }
+];
+---
+
+<Layout title="Security Services - Coming Soon">
+	<div class="container mx-auto px-4 pt-6">
+		<Breadcrumbs items={breadcrumbs} />
+	</div>
+	<ComingSoon 
+		serviceName="Security Services"
+		description="Comprehensive cybersecurity solutions to protect your business. From compliance audits to 24/7 threat monitoring, we'll keep your data safe and your certifications current."
+		launchDate="Q1 2026"
+	/>
+</Layout>

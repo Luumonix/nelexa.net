@@ -1,0 +1,44 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import RegionOverview from '@/components/regions/RegionOverview.astro';
+import Breadcrumbs from '@/components/SEO/Breadcrumbs.astro';
+import { getRegionBySlug } from '@/data/regions';
+
+const region = getRegionBySlug('chicago');
+
+if (!region) {
+  return Astro.redirect('/404');
+}
+
+const locationData = {
+  city: "Chicago",
+  state: "IL",
+  country: "US",
+  postalCode: "60607",
+  slug: "chicago",
+  coordinates: {
+    lat: 41.8781,
+    lng: -87.6298
+  },
+  description: "Premier Chicago datacenter offering VPS hosting, dedicated servers, colocation, and managed services. Strategic Midwest location with excellent connectivity for businesses and developers.",
+  image: region.hero.image
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Regions', url: '/regions' },
+  { name: 'Chicago', url: '/regions/chicago' }
+];
+---
+
+<Layout 
+  title={`Chicago VPS & Colocation - ${region.facility} Datacenter | Charged IT Solutions`}
+  description="Chicago datacenter featuring VPS from $5/mo, dedicated servers, and colocation starting at $70/mo. Located at Equinix CH3 with 42MW capacity. Perfect for Chicago businesses and Midwest connectivity."
+  keywords="Chicago VPS, Chicago colocation, Chicago datacenter, Chicago dedicated servers, Chicago managed services, Chicago cloud hosting, Chicago web hosting, Illinois VPS, Illinois colocation, Chicago IT services, Chicago disaster recovery, Chicago DDoS protection, Equinix Chicago, Chicago server hosting, Midwest hosting"
+  structuredData={{
+    type: 'localbusiness',
+    data: { location: locationData }
+  }}
+>
+  <RegionOverview region={region} breadcrumbs={breadcrumbs} />
+</Layout>

@@ -1,0 +1,63 @@
+---
+import LegalHeader from './LegalHeader.astro';
+import TableOfContents from './TableOfContents.astro';
+import LegalContent from './LegalContent.astro';
+
+interface Props {
+  title: string;
+  lastUpdated?: Date;
+  headings: {
+    depth: number;
+    slug: string;
+    text: string;
+  }[];
+}
+
+const { title, lastUpdated, headings } = Astro.props;
+---
+
+<div class="bg-white">
+  <LegalHeader title={title} lastUpdated={lastUpdated} />
+  
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 relative mt-6">
+      <aside class="relative">
+        <TableOfContents headings={headings} />
+      </aside>
+      
+      <main class="min-w-0">
+        <LegalContent>
+          <slot />
+        </LegalContent>
+      </main>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Override the global main padding for legal pages */
+  :global(main) {
+    padding-top: 0; /* Remove the padding from the main layout */
+  }
+  
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: 240px 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    
+    aside {
+      order: 1;
+    }
+    
+    main {
+      order: 2;
+    }
+  }
+</style>

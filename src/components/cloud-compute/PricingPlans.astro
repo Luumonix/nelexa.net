@@ -1,0 +1,280 @@
+---
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+
+const locations = [
+  {
+    id: "phoenix",
+    name: "Phoenix",
+    code: "PHX",
+    flag: "🇺🇸",
+    type: "Unprotected",
+    basePrice: 5.00,
+    specs: {
+      cpu: { price: 1.00, unit: "core/mo" },
+      ram: { price: 1.50, unit: "GB/mo" },
+      storage: { price: 0.10, unit: "GB/mo" },
+      bandwidth: { price: 1.00, unit: "TB/mo" },
+      ip: { price: 2.00, unit: "IPv4/mo" }
+    },
+    features: {
+      ddos: "Optional (+$2/TB)",
+      network: "10 Gbps",
+      storage: "NVMe SSD",
+      support: "24/7"
+    }
+  },
+  {
+    id: "miami",
+    name: "Miami",
+    code: "MIA",
+    flag: "🇺🇸",
+    type: "Protected",
+    basePrice: 5.00,
+    specs: {
+      cpu: { price: 1.00, unit: "core/mo" },
+      ram: { price: 1.50, unit: "GB/mo" },
+      storage: { price: 0.10, unit: "GB/mo" },
+      bandwidth: { price: 3.00, unit: "TB/mo" },
+      ip: { price: 2.00, unit: "IPv4/mo" }
+    },
+    features: {
+      ddos: "17+ Tbps Included",
+      network: "10 Gbps",
+      storage: "NVMe SSD",
+      support: "24/7"
+    }
+  },
+  {
+    id: "london",
+    name: "London",
+    code: "LHR",
+    flag: "🇬🇧",
+    type: "Protected",
+    basePrice: 5.50,
+    specs: {
+      cpu: { price: 1.50, unit: "core/mo" },
+      ram: { price: 1.50, unit: "GB/mo" },
+      storage: { price: 0.10, unit: "GB/mo" },
+      bandwidth: { price: 3.00, unit: "TB/mo" },
+      ip: { price: 2.00, unit: "IPv4/mo" }
+    },
+    features: {
+      ddos: "17+ Tbps Included",
+      network: "10 Gbps",
+      storage: "NVMe SSD",
+      support: "24/7"
+    }
+  }
+];
+---
+
+<section id="configurator" class="relative py-24 lg:py-32 overflow-hidden">
+  <!-- Background -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-primary-950"></div>
+  
+  <!-- Accent elements -->
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+
+  <div class="container relative z-10 px-6 mx-auto">
+    <!-- Section Header -->
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        Transparent pricing, <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">no surprises</span>
+      </h2>
+      <p class="text-lg md:text-xl text-white/60">
+        Build your VM with exactly the resources you need. Pay only for what you use.
+      </p>
+    </div>
+
+    <!-- Location Tabs -->
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+        <!-- Tab Navigation -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+          {locations.map((location, index) => (
+            <button
+              data-tab={location.id}
+              class={`tab-trigger px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                index === 0 
+                  ? 'bg-white text-black' 
+                  : 'bg-white/10 text-white hover:bg-white/20'
+              }`}
+            >
+              <span class="mr-2">{location.flag}</span>
+              {location.name}
+              <span class={`ml-2 text-xs px-2 py-0.5 rounded-full ${
+                location.type === 'Protected' 
+                  ? 'bg-blue-500/20 text-blue-300' 
+                  : 'bg-gray-500/20 text-gray-300'
+              }`}>
+                {location.type}
+              </span>
+            </button>
+          ))}
+        </div>
+
+        <!-- Tab Content -->
+        {locations.map((location, index) => (
+          <div 
+            data-tab-content={location.id}
+            class={`tab-content ${index !== 0 ? 'hidden' : ''}`}
+          >
+            <div class="grid lg:grid-cols-2 gap-8">
+              <!-- Pricing Details -->
+              <div>
+                <h3 class="text-2xl font-semibold text-white mb-6">
+                  {location.name} Datacenter
+                  <span class="text-sm font-normal text-white/50 ml-2">({location.code})</span>
+                </h3>
+
+                <!-- Base Price -->
+                <div class="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
+                  <div class="flex justify-between items-center">
+                    <span class="text-white/80">Starting from</span>
+                    <span class="text-2xl font-bold text-white">${location.basePrice.toFixed(2)}/mo</span>
+                  </div>
+                </div>
+
+                <!-- Resource Pricing -->
+                <div class="space-y-4">
+                  <h4 class="text-lg font-medium text-white mb-3">Resource Pricing</h4>
+                  
+                  {Object.entries(location.specs).map(([key, spec]) => (
+                    <div class="flex justify-between items-center py-3 border-b border-white/10">
+                      <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-white/10 rounded flex items-center justify-center">
+                          {key === 'cpu' && '⚡'}
+                          {key === 'ram' && '💾'}
+                          {key === 'storage' && '💿'}
+                          {key === 'bandwidth' && '🌐'}
+                          {key === 'ip' && '🔗'}
+                        </div>
+                        <span class="text-white/80 capitalize">
+                          {key === 'cpu' && 'CPU Cores'}
+                          {key === 'ram' && 'Memory (RAM)'}
+                          {key === 'storage' && 'SSD Storage'}
+                          {key === 'bandwidth' && 'Bandwidth'}
+                          {key === 'ip' && 'IPv4 Address'}
+                        </span>
+                      </div>
+                      <span class="text-white font-medium">
+                        ${spec.price.toFixed(2)} <span class="text-white/50 text-sm">/ {spec.unit}</span>
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <!-- Features & CTA -->
+              <div>
+                <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-xl p-6 border border-white/10">
+                  <h4 class="text-lg font-medium text-white mb-4">Included Features</h4>
+                  
+                  <div class="space-y-3 mb-6">
+                    {Object.entries(location.features).map(([key, value]) => (
+                      <div class="flex items-center justify-between">
+                        <span class="text-white/70 capitalize">{key.replace('ddos', 'DDoS Protection')}</span>
+                        <span class="text-white font-medium">{value}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div class="space-y-3 mb-6">
+                    <div class="flex items-center space-x-2 text-white/80">
+                      <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span>Instant deployment</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-white/80">
+                      <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span>On-demand backups</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-white/80">
+                      <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span>Full root access</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-white/80">
+                      <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span>99.99% uptime SLA</span>
+                    </div>
+                  </div>
+
+                  <a 
+                    href="https://client.chargeditsolutions.com/store/"
+                    class="block w-full text-center px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-white/90 transition-all duration-300 hover:scale-105"
+                  >
+                    Deploy in {location.name} →
+                  </a>
+                </div>
+
+                <!-- Example Configuration -->
+                <div class="mt-6 p-4 bg-white/5 rounded-lg border border-white/10">
+                  <h5 class="text-sm font-medium text-white/60 mb-2">Example Configuration</h5>
+                  <p class="text-white/80 text-sm">
+                    2 vCPU • 4GB RAM • 80GB SSD • 5TB Bandwidth
+                  </p>
+                  <p class="text-white font-medium mt-1">
+                    ~${(location.basePrice + (2 * location.specs.cpu.price) + (4 * location.specs.ram.price) + (80 * location.specs.storage.price) + (5 * location.specs.bandwidth.price) + location.specs.ip.price).toFixed(2)}/mo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-12">
+      <p class="text-white/60 mb-4">Need a custom solution or volume pricing?</p>
+      <a 
+        href="https://client.chargeditsolutions.com/contact"
+        class="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors"
+      >
+        <span>Contact our sales team</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Tab functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const triggers = document.querySelectorAll('[data-tab]');
+    const contents = document.querySelectorAll('[data-tab-content]');
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const tabId = trigger.getAttribute('data-tab');
+        
+        // Update triggers
+        triggers.forEach(t => {
+          t.classList.remove('bg-white', 'text-black');
+          t.classList.add('bg-white/10', 'text-white');
+        });
+        trigger.classList.remove('bg-white/10', 'text-white');
+        trigger.classList.add('bg-white', 'text-black');
+        
+        // Update contents
+        contents.forEach(content => {
+          if (content.getAttribute('data-tab-content') === tabId) {
+            content.classList.remove('hidden');
+          } else {
+            content.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+</script>

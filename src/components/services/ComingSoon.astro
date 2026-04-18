@@ -1,0 +1,119 @@
+---
+export interface Props {
+  serviceName: string;
+  description: string;
+  launchDate?: string;
+}
+
+const { serviceName, description, launchDate = "Q1 2026" } = Astro.props;
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 pt-[4.5rem]">
+  <!-- Background gradient matching the site theme -->
+  <div class="absolute inset-0 bg-gradient-to-b from-blue-950/15 via-slate-950 to-black"></div>
+  
+  <!-- Subtle network pattern -->
+  <div class="absolute inset-0 opacity-30">
+    <svg class="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="coming-soon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1e40af;stop-opacity:0.5" />
+          <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0.2" />
+        </linearGradient>
+      </defs>
+      
+      <!-- Random network lines -->
+      <line x1="0" y1="150" x2="350" y2="280" stroke="#3b82f6" stroke-width="1.2" opacity="0.6"/>
+      <line x1="350" y1="280" x2="650" y2="180" stroke="#64748b" stroke-width="1" opacity="0.5"/>
+      <line x1="650" y1="180" x2="900" y2="320" stroke="#3b82f6" stroke-width="1.2" opacity="0.6"/>
+      <line x1="900" y1="320" x2="1200" y2="250" stroke="#64748b" stroke-width="1" opacity="0.4"/>
+      
+      <line x1="0" y1="450" x2="250" y2="520" stroke="#64748b" stroke-width="1" opacity="0.5"/>
+      <line x1="250" y1="520" x2="550" y2="480" stroke="#3b82f6" stroke-width="1.2" opacity="0.6"/>
+      <line x1="550" y1="480" x2="750" y2="580" stroke="#64748b" stroke-width="1" opacity="0.5"/>
+      <line x1="750" y1="580" x2="1050" y2="500" stroke="#3b82f6" stroke-width="1.2" opacity="0.6"/>
+      <line x1="1050" y1="500" x2="1200" y2="550" stroke="#64748b" stroke-width="1" opacity="0.4"/>
+      
+      <!-- Cross connections -->
+      <line x1="350" y1="280" x2="250" y2="520" stroke="#1e40af" stroke-width="0.8" opacity="0.3"/>
+      <line x1="650" y1="180" x2="550" y2="480" stroke="#334155" stroke-width="0.8" opacity="0.3"/>
+      <line x1="900" y1="320" x2="750" y2="580" stroke="#1e40af" stroke-width="0.8" opacity="0.3"/>
+      
+      <!-- Additional random lines -->
+      <line x1="100" y1="0" x2="450" y2="150" stroke="#334155" stroke-width="0.8" opacity="0.3"/>
+      <line x1="800" y1="0" x2="950" y2="200" stroke="#1e40af" stroke-width="0.8" opacity="0.3"/>
+      <line x1="200" y1="800" x2="400" y2="650" stroke="#334155" stroke-width="0.8" opacity="0.3"/>
+      <line x1="850" y1="800" x2="1000" y2="700" stroke="#1e40af" stroke-width="0.8" opacity="0.3"/>
+    </svg>
+  </div>
+  
+  <!-- Content -->
+  <div class="container relative z-10 px-6 md:px-12 lg:px-16 xl:px-24 mx-auto">
+    <div class="max-w-3xl mx-auto text-center">
+      <!-- Service Name -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white mb-6">
+        {serviceName}
+      </h1>
+      
+      <!-- Description -->
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        {description}
+      </p>
+      
+      <!-- Launch Timeline -->
+      <div class="mb-12">
+        <p class="text-sm text-gray-400 mb-2">Expected Launch</p>
+        <p class="text-2xl font-semibold text-white">{launchDate}</p>
+      </div>
+      
+      <!-- CTA Section -->
+      <div class="space-y-6">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="mailto:hello@chargeditsolutions.com?subject=Early Access: {serviceName}" 
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg transition-all duration-300 hover:bg-gray-100"
+          >
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>Request Early Access</span>
+          </a>
+          
+          <a 
+            href="/" 
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 text-white font-semibold rounded-lg border border-gray-700 transition-all duration-300 hover:bg-gray-800"
+          >
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span>Back to Home</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Additional Info -->
+      <div class="mt-16 pt-16 border-t border-gray-800">
+        <p class="text-gray-400 mb-4">
+          In the meantime, check out our available services:
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/solutions/ddos-protection" class="text-blue-400 hover:text-blue-300 transition-colors">
+            DDoS Protection
+          </a>
+          <span class="text-gray-600">•</span>
+          <a href="/solutions/virtual-machines" class="text-blue-400 hover:text-blue-300 transition-colors">
+            Virtual Machines
+          </a>
+          <span class="text-gray-600">•</span>
+          <a href="/solutions/dedicated-metal" class="text-blue-400 hover:text-blue-300 transition-colors">
+            Dedicated Servers
+          </a>
+          <span class="text-gray-600">•</span>
+          <a href="/solutions/colocation" class="text-blue-400 hover:text-blue-300 transition-colors">
+            Colocation
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

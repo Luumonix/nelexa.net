@@ -1,0 +1,147 @@
+---
+const features = [
+  {
+    title: "VPS for Testing",
+    description: "Spin up VMs for testing and learning. Perfect for trying new software without risking your main setup.",
+    icon: "server",
+    specs: ["Multiple OS options", "Snapshot backups", "Console access", "Nested virtualization"]
+  },
+  {
+    title: "Colocation for Hardware",
+    description: "Bring your own servers. 1U to full rack options with power, cooling, and gigabit connectivity included.",
+    icon: "rack",
+    specs: ["1U starting at $70/mo", "Redundant power", "24/7 physical access", "Remote hands available"]
+  },
+  {
+    title: "No ISP Limitations",
+    description: "Static IPs, no port blocking, symmetric speeds, and no data caps. Run services the way they're meant to be run.",
+    icon: "network",
+    specs: ["Static IPv4 included", "IPv6 available", "No blocked ports", "1Gbps+ speeds"]
+  },
+  {
+    title: "24/7 Uptime",
+    description: "No more worrying about power outages, ISP issues, or family members unplugging your servers.",
+    icon: "uptime",
+    specs: ["99.9% uptime SLA", "Redundant power", "Generator backup", "24/7 monitoring"]
+  },
+  {
+    title: "Enterprise Hardware",
+    description: "Access to enterprise-grade networking and infrastructure that would be expensive to replicate at home.",
+    icon: "enterprise",
+    specs: ["10Gbps backbone", "Enterprise switches", "Redundant cooling", "Fire suppression"]
+  },
+  {
+    title: "Community Support",
+    description: "Join other homelabbers in our community. Share knowledge, get help, and collaborate on projects.",
+    icon: "community",
+    specs: ["Discord community", "Knowledge base", "Project showcases", "Peer support"]
+  }
+];
+
+const applications = [
+  { category: "Virtualization", apps: ["Proxmox", "VMware ESXi", "XCP-ng", "Hyper-V"] },
+  { category: "Networking", apps: ["pfSense", "OPNsense", "Unifi Controller", "Pi-hole"] },
+  { category: "Storage", apps: ["TrueNAS", "Nextcloud", "Syncthing", "MinIO"] },
+  { category: "Containers", apps: ["Docker", "Portainer", "Kubernetes", "Rancher"] },
+  { category: "Media", apps: ["Plex", "Jellyfin", "Sonarr", "Radarr"] },
+  { category: "Monitoring", apps: ["Grafana", "Prometheus", "Zabbix", "LibreNMS"] },
+  { category: "Automation", apps: ["Home Assistant", "Node-RED", "Ansible", "GitLab"] },
+  { category: "Security", apps: ["Bitwarden", "Authelia", "WireGuard", "OpenVPN"] }
+];
+---
+
+<section id="features" class="py-24 bg-gray-50 relative overflow-hidden">
+  <!-- Subtle background accent -->
+  <div class="absolute inset-0 opacity-[0.02]">
+    <div class="absolute top-0 left-1/3 w-96 h-96 bg-green-500 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Section header -->
+    <div class="text-center mb-16 max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-gray-900">
+        Professional hosting.
+        <span class="block text-green-500 mt-2">For passionate homelabbers.</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Whether you need a VPS for testing or colocation for your hardware, 
+        we provide the infrastructure to take your homelab to the next level.
+      </p>
+    </div>
+    
+    <!-- Features grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-24">
+      {features.map((feature) => (
+        <div class="group relative bg-white rounded-xl border border-gray-200 p-8 hover:border-gray-300 hover:shadow-xl transition-all duration-300">
+          <!-- Icon -->
+          <div class="w-14 h-14 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors duration-300">
+            {feature.icon === "server" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+              </svg>
+            )}
+            {feature.icon === "rack" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            )}
+            {feature.icon === "network" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            )}
+            {feature.icon === "uptime" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            )}
+            {feature.icon === "enterprise" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            )}
+            {feature.icon === "community" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            )}
+          </div>
+          
+          <!-- Content -->
+          <h3 class="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
+          
+          <!-- Specs list -->
+          <div class="space-y-2">
+            {feature.specs.map((spec) => (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm text-gray-600">{spec}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Popular Applications Section -->
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-gray-900 text-center mb-12">Popular Homelab Applications</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {applications.map((app) => (
+          <div class="bg-white rounded-lg border border-gray-200 p-6 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+            <h4 class="font-semibold text-gray-900 mb-3">{app.category}</h4>
+            <ul class="space-y-1">
+              {app.apps.map((name) => (
+                <li class="text-sm text-gray-600">{name}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

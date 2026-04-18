@@ -1,0 +1,103 @@
+---
+import { Button } from '@/components/ui/button';
+---
+
+<section id="contact" class="py-20 bg-white relative overflow-hidden">
+  <!-- Subtle background accent matching the style from About section -->
+  <div class="absolute inset-0 opacity-[0.02]">
+    <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl transform translate-x-1/2"></div>
+    <div class="absolute top-1/4 left-0 w-96 h-96 bg-cyan-500 rounded-full blur-3xl transform -translate-x-1/2"></div>
+  </div>
+  
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <!-- Header matching the style from About section -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-8 text-gray-900">
+          Let's work together.
+          <span class="block text-blue-500 mt-2">Three ways to start.</span>
+        </h2>
+        
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          From self-service to white-glove support. 
+          Choose the approach that works for you.
+        </p>
+      </div>
+      
+      <!-- Three clear options -->
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <!-- DIY Option -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+            <div class="mb-4">
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-2">Self-Service</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Know what you need? Spin it up now. VMs deploy in under a minute.
+              </p>
+              <a 
+                href="https://client.chargeditsolutions.com/store" 
+                class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center gap-1"
+              >
+                Browse servers
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Consultation Option -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+            <div class="mb-4">
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-2">Get Advice</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Not sure what you need? Let's figure it out together. No charge.
+              </p>
+              <a 
+                href="mailto:hello@chargeditsolutions.com" 
+                class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center gap-1"
+              >
+                Email us
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Enterprise Option -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+            <div class="mb-4">
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 class="font-bold text-gray-900 mb-2">Enterprise</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Need SLAs, compliance docs, or custom configs? We do that too.
+              </p>
+              <a 
+                href="tel:+16022096009" 
+                class="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center gap-1"
+              >
+                Call us
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>

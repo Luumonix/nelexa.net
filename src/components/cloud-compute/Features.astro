@@ -1,0 +1,119 @@
+---
+const features = [
+  {
+    title: "Instant Deployment",
+    description: "Spin up your VM in under 30 seconds. Automated provisioning with zero manual intervention.",
+    icon: "lightning",
+    specs: ["30-second deployment", "Automated provisioning", "Pre-configured templates", "Custom ISO support"]
+  },
+  {
+    title: "Complete Customization",
+    description: "Configure exact CPU cores, RAM, storage, and bandwidth. Build exactly what your application needs.",
+    icon: "customize",
+    specs: ["1-32 CPU cores", "1-256GB RAM", "20GB-2TB NVMe SSD", "1-100TB bandwidth"]
+  },
+  {
+    title: "Enterprise Performance",
+    description: "NVMe SSD storage, redundant network paths, and premium processors deliver consistent performance.",
+    icon: "performance",
+    specs: ["NVMe SSD storage", "10Gbps network", "Intel Xeon / AMD EPYC", "DDR4 ECC memory"]
+  },
+  {
+    title: "Global Infrastructure",
+    description: "Deploy in Phoenix, Miami, Chicago, or London. Low latency to major population centers.",
+    icon: "globe",
+    specs: ["Phoenix, AZ", "Miami, FL", "Chicago, IL", "London, UK"]
+  },
+  {
+    title: "Bulletproof Security",
+    description: "Optional DDoS protection, private networking, and full root access. Your infrastructure, your rules.",
+    icon: "security",
+    specs: ["17+ Tbps DDoS protection", "Private VLANs", "Firewall rules", "Full root access"]
+  },
+  {
+    title: "Developer Friendly",
+    description: "Full API access, snapshot backups, and one-click scaling. Automate everything with our RESTful API.",
+    icon: "developer",
+    specs: ["RESTful API", "Snapshot backups", "One-click scaling", "Terraform provider"]
+  }
+];
+---
+
+<section id="features" class="py-24 bg-gray-50 relative overflow-hidden">
+  <!-- Subtle background accent -->
+  <div class="absolute inset-0 opacity-[0.02]">
+    <div class="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/3 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Section header -->
+    <div class="text-center mb-16 max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-gray-900">
+        Infrastructure that adapts.
+        <span class="block text-blue-500 mt-2">Not compromises.</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Every resource customizable. Every feature accessible. 
+        Build the exact infrastructure your application demands.
+      </p>
+    </div>
+    
+    <!-- Features grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      {features.map((feature) => (
+        <div class="group relative bg-white rounded-xl border border-gray-200 p-8 hover:border-gray-300 hover:shadow-xl transition-all duration-300">
+          <!-- Icon -->
+          <div class="w-14 h-14 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors duration-300">
+            {feature.icon === "lightning" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            )}
+            {feature.icon === "customize" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+            )}
+            {feature.icon === "performance" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            )}
+            {feature.icon === "globe" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            )}
+            {feature.icon === "security" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            )}
+            {feature.icon === "developer" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            )}
+          </div>
+          
+          <!-- Content -->
+          <h3 class="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
+          
+          <!-- Specs list -->
+          <div class="space-y-2">
+            {feature.specs.map((spec) => (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm text-gray-600">{spec}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

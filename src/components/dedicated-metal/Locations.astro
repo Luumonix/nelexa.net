@@ -1,0 +1,89 @@
+---
+import { Image } from 'astro:assets';
+import phoenixImage from '@/assets/img/iron_mountain_phoenix_az.webp';
+import miamiImage from '@/assets/img/miami_florida.jpg';
+import chicagoImage from '@/assets/img/equinix_ch4.jpg';
+import londonImage from '@/assets/img/telehouse_london.jpg';
+
+const locations = [
+  {
+    name: "Phoenix, AZ",
+    facility: "Iron Mountain AZS-1",
+    image: phoenixImage,
+    features: ["Tier 3+ certified", "N+1 redundancy", "24/7 security"]
+  },
+  {
+    name: "Miami, FL",
+    facility: "365 Datacenters BC1",
+    image: miamiImage,
+    features: ["Hurricane rated", "Carrier neutral", "Low latency to LATAM"]
+  },
+  {
+    name: "Chicago, IL",
+    facility: "Equinix CH4",
+    image: chicagoImage,
+    features: ["Major IX presence", "Dense peering", "Central US hub"]
+  },
+  {
+    name: "London, UK",
+    facility: "Telehouse North",
+    image: londonImage,
+    features: ["LINX connected", "EU gateway", "Premium facility"]
+  }
+];
+---
+
+<section id="locations" class="py-24 bg-white relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Section header -->
+    <div class="text-center mb-16 max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-gray-900">
+        Premium facilities.
+        <span class="block text-blue-500 mt-2">Strategic locations.</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Tier 3+ datacenters with redundant everything. 
+        Your hardware lives in the best facilities on the planet.
+      </p>
+    </div>
+    
+    <!-- Locations grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      {locations.map((location) => (
+        <div class="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-300">
+          <!-- Location image -->
+          <div class="relative h-48 overflow-hidden bg-gray-100">
+            <Image 
+              src={location.image} 
+              alt={`${location.facility} datacenter`}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              width={1200}
+              height={900}
+              loading="lazy"
+              quality={95}
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          </div>
+          
+          <!-- Location info -->
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">{location.name}</h3>
+            <p class="text-sm text-gray-600 mb-4">{location.facility}</p>
+            
+            <!-- Features -->
+            <div class="space-y-2">
+              {location.features.map((feature) => (
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-gray-600">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

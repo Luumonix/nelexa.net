@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/ddos-protection/Hero.astro';
+import Features from '../../components/ddos-protection/Features.astro';
+import NetworkMap from '../../components/ddos-protection/NetworkMap.astro';
+import CallToAction from '../../components/ddos-protection/CallToAction.astro';
+import Breadcrumbs from '../../components/SEO/Breadcrumbs.astro';
+
+const serviceData = {
+	type: "Security Service",
+	name: "DDoS Protection",
+	description: "Enterprise-grade DDoS protection with global scrubbing centers, real-time threat detection, and 24/7 monitoring. Protect your infrastructure from attacks up to 500Gbps."
+};
+
+const breadcrumbs = [
+	{ name: 'Home', url: '/' },
+	{ name: 'Solutions', url: '/solutions' },
+	{ name: 'DDoS Protection', url: '/solutions/ddos-protection' }
+];
+---
+
+<Layout 
+	title="DDoS Protection - Shield Your Online Presence | 17Tbps+ Defense"
+	description="Sleep soundly knowing your online presence is protected. Whether you're running a personal blog, gaming server, or critical business infrastructure - our 17Tbps+ DDoS protection keeps you online when others try to take you down. Real-time mitigation, zero downtime."
+	keywords="DDoS protection, DDoS mitigation, DDoS defense, anti-DDoS, DDoS shield, network security, cyber security, attack mitigation, DDoS protection service, game server DDoS protection, website DDoS protection, business DDoS protection, Phoenix DDoS protection, Miami DDoS protection, Chicago DDoS protection, London DDoS protection, affordable DDoS protection, enterprise DDoS protection, always-on DDoS protection, DDoS protection for individuals, DDoS protection for businesses"
+	structuredData={{
+		type: 'service',
+		data: { service: serviceData }
+	}}
+>
+	<Hero breadcrumbs={breadcrumbs} />
+	<Features />
+	<NetworkMap />
+	<CallToAction />
+</Layout>

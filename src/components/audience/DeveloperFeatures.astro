@@ -1,0 +1,119 @@
+---
+const features = [
+  {
+    title: "Full Root Access",
+    description: "Complete control over your environment. Install any software, configure any service, customize everything.",
+    icon: "terminal",
+    specs: ["SSH access", "Sudo privileges", "Custom kernels", "Full filesystem control"]
+  },
+  {
+    title: "Developer Tools Ready",
+    description: "Pre-installed development tools or one-click installers. Get coding faster with everything you need.",
+    icon: "code",
+    specs: ["Git, Docker, Node.js", "Python, Ruby, Go", "Rust, PHP, Java", "Database servers"]
+  },
+  {
+    title: "API-First Infrastructure",
+    description: "Automate everything with our RESTful API. Perfect for CI/CD pipelines and infrastructure as code.",
+    icon: "api",
+    specs: ["RESTful API", "Terraform provider", "CLI tools", "Webhook support"]
+  },
+  {
+    title: "Instant Deployment",
+    description: "Spin up new instances in seconds. Choose from multiple Linux distros or bring your own ISO.",
+    icon: "rocket",
+    specs: ["30-second deploy", "Multiple OS options", "Custom ISO support", "Snapshot backups"]
+  },
+  {
+    title: "Developer Support",
+    description: "Our support team speaks your language. Get help with deployments, not just server issues.",
+    icon: "support",
+    specs: ["24/7 technical support", "Developer-friendly docs", "Community Discord", "Stack Overflow presence"]
+  },
+  {
+    title: "Flexible Resources",
+    description: "Scale up or down anytime. Pay only for what you use. No contracts, cancel anytime.",
+    icon: "scale",
+    specs: ["Instant scaling", "Hourly billing", "No contracts", "Resource monitoring"]
+  }
+];
+---
+
+<section id="features" class="py-24 bg-gray-50 relative overflow-hidden">
+  <!-- Subtle background accent -->
+  <div class="absolute inset-0 opacity-[0.02]">
+    <div class="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/3 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Section header -->
+    <div class="text-center mb-16 max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-gray-900">
+        Everything developers need.
+        <span class="block text-blue-500 mt-2">Nothing they don't.</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Clean, powerful infrastructure designed for modern development workflows. 
+        From solo projects to enterprise applications.
+      </p>
+    </div>
+    
+    <!-- Features grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      {features.map((feature) => (
+        <div class="group relative bg-white rounded-xl border border-gray-200 p-8 hover:border-gray-300 hover:shadow-xl transition-all duration-300">
+          <!-- Icon -->
+          <div class="w-14 h-14 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors duration-300">
+            {feature.icon === "terminal" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            )}
+            {feature.icon === "code" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            )}
+            {feature.icon === "api" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+              </svg>
+            )}
+            {feature.icon === "rocket" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            )}
+            {feature.icon === "support" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            )}
+            {feature.icon === "scale" && (
+              <svg class="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+              </svg>
+            )}
+          </div>
+          
+          <!-- Content -->
+          <h3 class="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
+          
+          <!-- Specs list -->
+          <div class="space-y-2">
+            {feature.specs.map((spec) => (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-sm text-gray-600">{spec}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// Get all legal documents
+const legalDocuments = await getCollection('legal');
+
+// Sort documents alphabetically by title
+legalDocuments.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+// Format date function
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+---
+
+<Layout title="Legal Documents">
+  <div class="bg-white">
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-br from-primary-900 to-primary-800 text-white text-center pt-32 pb-12">
+      <div class="container">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">Legal Documents</h1>
+        <p class="text-xl max-w-3xl mx-auto leading-relaxed opacity-90">
+          Review all legal documents, policies, and terms that apply when using Charged IT Solutions LLC services. 
+          By using our services, you agree to these terms and policies.
+        </p>
+      </div>
+    </div>
+
+    <!-- Documents Grid -->
+    <div class="py-16 md:py-24 bg-white">
+      <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {legalDocuments.map((document) => (
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-full flex flex-col border border-gray-200">
+              <div class="p-6 flex flex-col h-full">
+                <h2 class="text-2xl font-bold mb-3 text-primary-900">{document.data.title}</h2>
+                <p class="text-gray-500 mb-4 flex-grow">{document.data.description}</p>
+                <p class="text-sm text-gray-500 mb-4">Last updated: {formatDate(document.data.lastUpdated)}</p>
+                <a 
+                  href={`/${document.id.replace('legal/', '').replace('.md', '')}`} 
+                  class="inline-flex items-center text-secondary-500 font-semibold hover:text-accent-500 transition-colors duration-200 mt-auto group"
+                >
+                  Read Document
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"
+                    class="ml-2 transition-transform duration-200 group-hover:translate-x-1"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
