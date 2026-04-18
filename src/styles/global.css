@@ -93,7 +93,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 via-primary-300 to-accent-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-400 via-primary-300 to-accent-400 bg-clip-text text-transparent pb-1;
   }
 
   .glass-card {
