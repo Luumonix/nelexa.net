@@ -1,107 +1,148 @@
 ---
 const services = [
   {
-    number: "01",
+    id: "dedicated",
     title: "Dedicated Servers",
+    subtitle: "From $549/month",
+    description: "Purpose-built HPC & EVC bare-metal platforms. AMD Ryzen 9000-series and dual-socket Intel Xeon — ready in hours.",
     href: "/dedicated",
-    description: "Purpose-built HPC and EVC bare-metal platforms with AMD Ryzen 9000-series and dual-socket Intel Xeon configurations. Fully managed, ready in hours.",
-    features: [
-      "AMD Ryzen 9950X / Dual Xeon Gold 6138",
-      "Up to 512GB DDR4 / 256GB DDR5",
-      "Dual 10Gbps network, 1Gbps unmetered",
-      "Dallas & New York availability",
-    ],
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 12H19M5 12C3.89543 12 3 11.1046 3 10V6C3 4.89543 3.89543 4 5 4H19C20.1046 4 21 4.89543 21 6V10C21 11.1046 20.1046 12 19 12M5 12C3.89543 12 3 12.8954 3 14V18C3 19.1046 3.89543 20 5 20H19C20.1046 20 21 19.1046 21 18V14C21 12.8954 20.1046 12 19 12M7 8H7.01M7 16H7.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+    features: ["HPC & EVC platforms", "Dallas & New York", "Dual 10Gbps networking", "IPMI & custom builds"],
+    highlight: true,
   },
   {
-    number: "02",
+    id: "colocation",
     title: "Colocation",
+    subtitle: "From $10/U",
+    description: "1U to full-rack space in carrier-neutral Dallas and New York facilities. Transparent instant quoting, no hidden fees.",
     href: "/colocation",
-    description: "1U to full-rack space in carrier-neutral Dallas and New York facilities. Transparent instant quoting, no hidden fees, no surprises.",
-    features: [
-      "Half Rack: 21U, 2.5kW, 1Gbps",
-      "Full Rack: 42U, 6kW, 1Gbps",
-      "24/7 on-site remote hands",
-      "Redundant power & cooling",
-    ],
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+    features: ["Half & full racks", "N+1 power", "24/7 remote hands", "Cross-connects"],
   },
   {
-    number: "03",
+    id: "hardware",
     title: "Hardware Solutions",
+    subtitle: "Custom builds",
+    description: "Custom server builds, enterprise procurement, and complete lifecycle management. Rack servers, blades, storage arrays, and networking.",
     href: "/hardware",
-    description: "Custom server builds, enterprise procurement, and complete lifecycle management. From single servers to complete infrastructure deployments.",
-    features: [
-      "Rack servers, blades, storage, networking",
-      "Professional assembly & testing",
-      "White-glove delivery & installation",
-      "5-year warranty, 24/7 support",
-    ],
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+    features: ["Rack, blade, storage", "Professional assembly", "White-glove delivery", "Lifecycle management"],
   },
   {
-    number: "04",
+    id: "ip-transit",
     title: "IP Transit",
+    subtitle: "From $100/Gbps",
+    description: "Premium carrier-diverse IP transit with guaranteed performance. Clean, DDoS-protected, or mixed — on 10GE, 40GE, or 100GE ports.",
     href: "/ip-transit",
-    description: "Premium carrier-diverse IP transit with guaranteed performance and global reach. Clean, DDoS-protected, or mixed — on 10GE, 40GE, or 100GE ports.",
-    features: [
-      "Clean: $100/Gbps at 95th percentile",
-      "DDoS Protected: $160/Gbps, no commit",
-      "10GE / 40GE / 100GE port options",
-      "Single and dual-port redundancy",
-    ],
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.5 19H17.5M6.5 19C4.567 19 3 17.433 3 15.5C3 13.567 4.567 12 6.5 12C6.5 9.239 8.739 7 11.5 7C14.261 7 16.5 9.239 16.5 12C18.433 12 20 13.567 20 15.5C20 17.433 18.433 19 16.5 19M6.5 19H16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+    features: ["95th percentile billing", "Always-on DDoS option", "10/40/100GE ports", "Dual-port redundancy"],
+    highlight: true,
+  },
+  {
+    id: "case-studies",
+    title: "Case Studies",
+    subtitle: "See real results",
+    description: "How Nelexa powers mission-critical workloads for game hosts, SaaS platforms, and growing infrastructure teams.",
+    href: "/case-studies",
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+    features: ["Waterfall Technologies", "Lagless.gg", "Real performance numbers", "Migration stories"],
+  },
+  {
+    id: "regions",
+    title: "Regions",
+    subtitle: "Dallas · New York",
+    description: "Carrier-dense Tier III facilities on both coasts. Low latency to US financial, media, and enterprise networks.",
+    href: "/locations/dallas",
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+    </svg>`,
+    features: ["Dallas, TX (DFW)", "New York, NY (NYC)", "Carrier-diverse backbone", "Cross-region private links"],
   },
 ];
 ---
 
-<section id="services" class="relative py-24 md:py-32 bg-black overflow-hidden">
-  <!-- Background accents -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-primary-900/30 rounded-full blur-[140px] pointer-events-none"></div>
+<section id="services" class="py-24 bg-gray-50 relative overflow-hidden">
+  <!-- Subtle background accent -->
+  <div class="absolute inset-0 opacity-[0.03]">
+    <div class="absolute top-0 left-1/3 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/3 w-96 h-96 bg-accent-500 rounded-full blur-3xl"></div>
+  </div>
 
-  <div class="container mx-auto relative z-10">
-    <div class="max-w-3xl mb-16">
-      <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-white/10 bg-white/[0.03] text-xs font-medium text-white/70">
-        Our Services
-      </div>
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white tracking-tighter mb-6">
-        Four pillars. <span class="gradient-text italic">Zero compromises.</span>
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-8 text-gray-900">
+        Everything you need.
+        <span class="block text-primary-600 mt-2">Nothing you don't.</span>
       </h2>
-      <p class="text-lg text-white/60 leading-relaxed">
-        Every layer of your stack, delivered from a single partner. No vendor sprawl, no finger-pointing, no surprises — just infrastructure that works the way you need it to.
+      <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Four core services, two data centers, one team.
+        Infrastructure that works the way your workloads need it to.
       </p>
     </div>
 
     <!-- Services Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
       {services.map((service) => (
-        <a 
-          href={service.href}
-          class="group relative glass-card p-8 md:p-10 hover:border-primary-500/50 transition-all duration-300 overflow-hidden"
-        >
-          <!-- Hover gradient -->
-          <div class="absolute inset-0 bg-gradient-to-br from-primary-600/0 via-primary-600/0 to-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          
-          <div class="relative z-10">
-            <div class="flex items-start justify-between mb-6">
-              <div class="font-mono text-sm text-primary-400 tracking-widest">{service.number}</div>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white/30 group-hover:text-primary-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
-                <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path>
-              </svg>
+        <div class="group relative bg-white rounded-xl border border-gray-200 hover:border-primary-300 transition-all duration-300 overflow-hidden flex flex-col h-full hover:shadow-xl">
+          {service.highlight && (
+            <div class="absolute top-4 right-4">
+              <div class="bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                Popular
+              </div>
+            </div>
+          )}
+
+          <div class="p-8 flex flex-col h-full">
+            <!-- Icon and Title -->
+            <div class="mb-6">
+              <div class="w-12 h-12 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center mb-4 group-hover:bg-primary-100 transition-colors duration-200" set:html={service.icon} />
+              <h3 class="text-xl font-bold text-gray-900 mb-1">{service.title}</h3>
+              <p class="text-base text-gray-600 font-semibold">{service.subtitle}</p>
             </div>
 
-            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">{service.title}</h3>
-            <p class="text-white/60 leading-relaxed mb-6">{service.description}</p>
+            <!-- Description -->
+            <p class="text-gray-600 mb-6 flex-grow leading-relaxed">{service.description}</p>
 
-            <ul class="space-y-2.5">
+            <!-- Features -->
+            <ul class="mb-6 space-y-2">
               {service.features.map(feature => (
-                <li class="flex items-start gap-3 text-sm text-white/70">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary-400 mt-0.5 flex-shrink-0">
-                    <polyline points="20 6 9 17 4 12"></polyline>
+                <li class="flex items-start gap-2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary-600 flex-shrink-0 mt-0.5">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>{feature}</span>
+                  <span class="text-gray-600 text-sm">{feature}</span>
                 </li>
               ))}
             </ul>
+
+            <!-- CTA -->
+            <div class="mt-auto">
+              <a
+                href={service.href}
+                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-gray-50 text-gray-700 font-medium text-sm transition-all duration-200 hover:bg-primary-50 hover:text-primary-700"
+              >
+                <span>Learn More About {service.title}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover:translate-x-0.5">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
           </div>
-        </a>
+        </div>
       ))}
     </div>
   </div>
