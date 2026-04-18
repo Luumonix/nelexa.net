@@ -1,0 +1,56 @@
+---
+const locations = [
+  {
+    city: "Dallas, TX",
+    facility: "DataBank DFW1",
+    address: "1515 Round Table Dr, Dallas, TX 75247",
+    carriers: ["Cogent", "Lumen", "Hurricane Electric", "Zayo"],
+    href: "/locations/dallas",
+  },
+  {
+    city: "New York, NY",
+    facility: "165 Halsey St / 60 Hudson St",
+    address: "165 Halsey St, Newark, NJ 07102",
+    carriers: ["Cogent", "Telia", "GTT", "Hurricane Electric"],
+    href: "/locations/new-york",
+  },
+];
+---
+
+<section class="py-24 bg-black">
+  <div class="container">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Our locations</h2>
+    <p class="text-neutral-400 mb-12 max-w-2xl">
+      Carrier-neutral facilities on both coasts. Direct interconnection with Tier 1 networks.
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {locations.map((location) => (
+        <div class="p-6 border border-white/10 rounded-xl">
+          <h3 class="text-2xl font-semibold text-white mb-2">{location.city}</h3>
+          <p class="text-primary-400 font-medium mb-4">{location.facility}</p>
+          
+          <p class="text-neutral-500 text-sm mb-4">{location.address}</p>
+          
+          <div class="mb-6">
+            <p class="text-xs text-neutral-600 uppercase tracking-wide mb-2">Transit providers</p>
+            <div class="flex flex-wrap gap-2">
+              {location.carriers.map((carrier) => (
+                <span class="text-sm text-neutral-400 bg-white/5 px-2 py-1 rounded">
+                  {carrier}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+          <a 
+            href={location.href}
+            class="text-sm text-neutral-400 hover:text-white transition-colors"
+          >
+            View details →
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
