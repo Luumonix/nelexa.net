@@ -5,9 +5,9 @@ lastUpdated: 2025-03-05
 ---
 ## 1. INTRODUCTION AND OVERVIEW
 
-This Privacy Policy ("Policy") is provided by Nelexa, Inc., a corporation with offices in Dallas, Texas and New York, New York, United States of America. (hereinafter referred to as "Nelexa," "Company," "we," "us," or "our").
+This Privacy Policy ("Policy") is provided by Elcro Digital Services, LLC dba Nelexa Networks, a corporation with offices in Dallas, Texas and New York, New York, United States of America. (hereinafter referred to as "Nelexa," "Company," "we," "us," or "our").
 
-This Policy describes in comprehensive detail the types of information we may collect from you or that you may provide when you visit our website at nelexa.net (the "Website"), use our mobile applications, utilize our computing services, managed services, advanced DDoS protection services, or any other products or services offered by Nelexa, Inc. (collectively, the "Services"), and our practices for collecting, using, maintaining, protecting, disclosing, retaining, and processing that information.
+This Policy describes in comprehensive detail the types of information we may collect from you or that you may provide when you visit our website at nelexa.net (the "Website"), use our mobile applications, utilize our computing services, managed services, advanced DDoS protection services, or any other products or services offered by Elcro Digital Services, LLC dba Nelexa Networks (collectively, the "Services"), and our practices for collecting, using, maintaining, protecting, disclosing, retaining, and processing that information.
 
 This Policy applies to information we collect or receive:
 - Through our Website and Services;
@@ -26,7 +26,7 @@ For the purposes of this Privacy Policy, the following definitions shall apply:
 
 **"Anonymous Information"** means information that does not directly or indirectly identify, and cannot reasonably be used to identify, an individual customer or user.
 
-**"Applicable Law"** means all applicable laws, statutes, regulations, directives, orders, and codes of practice or conduct, including, but not limited to, the California Consumer Privacy Act (CCPA), the California Privacy Rights Act (CPRA), the General Data Protection Regulation (GDPR), the UK Data Protection Act 2018, the Children's Online Privacy Protection Act (COPPA), Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), and other data protection and privacy laws in jurisdictions where Nelexa, Inc. operates or provides Services.
+**"Applicable Law"** means all applicable laws, statutes, regulations, directives, orders, and codes of practice or conduct, including, but not limited to, the California Consumer Privacy Act (CCPA), the California Privacy Rights Act (CPRA), the General Data Protection Regulation (GDPR), the UK Data Protection Act 2018, the Children's Online Privacy Protection Act (COPPA), Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), and other data protection and privacy laws in jurisdictions where Elcro Digital Services, LLC dba Nelexa Networks operates or provides Services.
 
 **"Business Purpose"** means the use of Personal Information for the Company's operational purposes, or other notified purposes, provided that the use of Personal Information is reasonably necessary and proportionate to achieve the operational purpose for which the Personal Information was collected or processed or for another operational purpose that is compatible with the context in which the Personal Information was collected.
 
@@ -48,7 +48,7 @@ For the purposes of this Privacy Policy, the following definitions shall apply:
 
 ## 3. INFORMATION WE COLLECT AND HOW WE COLLECT IT
 
-Nelexa, Inc. collects several types of information from and about users of our Services, including:
+Elcro Digital Services, LLC dba Nelexa Networks collects several types of information from and about users of our Services, including:
 
 ### 3.1 Categories of Personal Information
 
@@ -457,7 +457,7 @@ Our Website and Services may contain links to third-party websites, applications
 
 ## 12. INTERNATIONAL DATA TRANSFERS
 
-Nelexa, Inc. is based in the United States. When you access or use our Services, your information may be transferred to, stored, and processed in the United States and other countries where our service providers maintain facilities. These countries may not have the same data protection laws as the country in which you initially provided the information.
+Elcro Digital Services, LLC dba Nelexa Networks is based in the United States. When you access or use our Services, your information may be transferred to, stored, and processed in the United States and other countries where our service providers maintain facilities. These countries may not have the same data protection laws as the country in which you initially provided the information.
 
 ### 12.1 Data Transfers from the EEA, UK, or Switzerland
 
@@ -495,7 +495,7 @@ Our Services are not intended for children under 16 years of age, and we do not 
 
 To ask questions or comment about this Privacy Policy and our privacy practices, please contact our Data Protection Officer or Privacy Team at:
 
-**Nelexa, Inc.**  
+**Elcro Digital Services, LLC dba Nelexa Networks**  
 Attn: Privacy Team  
 14853 N 100th Pl
 Dallas, TX / New York, NY 
@@ -509,7 +509,7 @@ Website: nelexa.net
 
 If you are located in the European Economic Area, our EU representative can be contacted at:
 
-**Nelexa, Inc.**  
+**Elcro Digital Services, LLC dba Nelexa Networks**  
 Attn: Privacy Team  
 14853 N 100th Pl
 Dallas, TX / New York, NY 
@@ -523,7 +523,7 @@ Website: nelexa.net
 
 If you are located in the United Kingdom, our UK representative can be contacted at:
 
-**Nelexa, Inc.**  
+**Elcro Digital Services, LLC dba Nelexa Networks**  
 Attn: Privacy Team  
 14853 N 100th Pl
 Dallas, TX / New York, NY 
@@ -548,7 +548,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, YOU AND NELEXA, INC. AGREE TH
 
 ### 16.3 Small Claims Court
 
-Notwithstanding the foregoing, either you or Nelexa, Inc. may bring an individual action in small claims court in Dallas County, Texas, provided that such action is within the jurisdiction of that court.
+Notwithstanding the foregoing, either you or Elcro Digital Services, LLC dba Nelexa Networks may bring an individual action in small claims court in Dallas County, Texas, provided that such action is within the jurisdiction of that court.
 
 ## 17. GOVERNING LAW
 
@@ -564,7 +564,7 @@ No waiver of any term of this Privacy Policy shall be deemed a further or contin
 
 ## 20. ENTIRE AGREEMENT
 
-This Privacy Policy, together with any other privacy notices or terms provided by us, constitutes the sole and entire agreement between you and Nelexa, Inc. regarding the collection, use, and processing of your Personal Information and supersedes all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding such subject matter.
+This Privacy Policy, together with any other privacy notices or terms provided by us, constitutes the sole and entire agreement between you and Elcro Digital Services, LLC dba Nelexa Networks regarding the collection, use, and processing of your Personal Information and supersedes all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding such subject matter.
 
 ## 21. CALIFORNIA RESIDENTS: ADDITIONAL PRIVACY RIGHTS
 
@@ -660,10 +660,10 @@ This section applies to individuals in the European Economic Area, the United Ki
 
 ### 23.1 Data Controller
 
-Nelexa, Inc. is the data controller of your Personal Information covered by this Privacy Policy for purposes of European data protection legislation (including the EU General Data Protection Regulation and the UK Data Protection Act 2018).
+Elcro Digital Services, LLC dba Nelexa Networks is the data controller of your Personal Information covered by this Privacy Policy for purposes of European data protection legislation (including the EU General Data Protection Regulation and the UK Data Protection Act 2018).
 
 Our EU representative can be contacted at:
-**Nelexa, Inc.**  
+**Elcro Digital Services, LLC dba Nelexa Networks**  
 Attn: Privacy Team  
 14853 N 100th Pl
 Dallas, TX / New York, NY 
@@ -674,7 +674,7 @@ Phone: +1 (602) 209-6009
 Website: nelexa.net
 
 Our UK representative can be contacted at:
-**Nelexa, Inc.**  
+**Elcro Digital Services, LLC dba Nelexa Networks**  
 Attn: Privacy Team  
 14853 N 100th Pl
 Dallas, TX / New York, NY 

@@ -10,7 +10,7 @@ const { type = 'organization', data } = Astro.props;
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Nelexa, Inc.",
+  "name": "Elcro Digital Services, LLC dba Nelexa Networks",
   "alternateName": "Nelexa",
   "url": "https://nelexa.net",
   "logo": "https://nelexa.net/android-chrome-512x512.png",
@@ -59,7 +59,7 @@ const serviceSchema = data?.service ? {
   "serviceType": data.service.type,
   "provider": {
     "@type": "Organization",
-    "name": "Nelexa, Inc."
+    "name": "Elcro Digital Services, LLC dba Nelexa Networks"
   },
   "name": data.service.name,
   "description": data.service.description,
@@ -72,7 +72,7 @@ const localBusinessSchema = data?.location ? {
   "name": `Nelexa — ${data.location.city} Data Center`,
   "parentOrganization": {
     "@type": "Organization",
-    "name": "Nelexa, Inc."
+    "name": "Elcro Digital Services, LLC dba Nelexa Networks"
   },
   "address": {
     "@type": "PostalAddress",

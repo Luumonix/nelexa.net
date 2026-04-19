@@ -7,7 +7,7 @@ lastUpdated: 2025-08-05
 
 ### 1.1 Purpose and Scope
 
-This Service Level Agreement ("Agreement" or "SLA") is entered into by and between Nelexa, Inc. ("Provider," "Company," "we," "us," or "our"), a corporation, with its principal place of business at Dallas, TX and New York, NY USA, and the client or customer ("Client," "Customer," "you," or "your") who has purchased or subscribed to our services as defined herein.
+This Service Level Agreement ("Agreement" or "SLA") is entered into by and between Elcro Digital Services, LLC dba Nelexa Networks ("Provider," "Company," "we," "us," or "our"), a corporation, with its principal place of business at Dallas, TX and New York, NY USA, and the client or customer ("Client," "Customer," "you," or "your") who has purchased or subscribed to our services as defined herein.
 
 This Agreement sets forth the terms and conditions under which Provider will deliver and maintain the Services, including but not limited to cloud computing services, dedicated server solutions, managed services, and distributed denial of service ("DDoS") protection services (collectively, the "Services"). This Agreement establishes the expected level of service performance, availability, reliability, responsibilities, and remedies.
 

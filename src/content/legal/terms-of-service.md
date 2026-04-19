@@ -5,7 +5,7 @@ lastUpdated: 2025-03-05
 ---
 ## 1. INTRODUCTION
 
-These Terms of Service ("Terms") constitute a legally binding agreement between you, whether personally or on behalf of an entity ("you," "your," or "Customer") and Nelexa, Inc., a corporation with its principal place of business at Dallas, TX and New York, NY USA ("Company," "we," "us," or "our"), governing your access to and use of the Company's websites, applications, compute services, managed services, DDoS protection, and other services offered by the Company (collectively, the "Services").
+These Terms of Service ("Terms") constitute a legally binding agreement between you, whether personally or on behalf of an entity ("you," "your," or "Customer") and Elcro Digital Services, LLC dba Nelexa Networks, a corporation with its principal place of business at Dallas, TX and New York, NY USA ("Company," "we," "us," or "our"), governing your access to and use of the Company's websites, applications, compute services, managed services, DDoS protection, and other services offered by the Company (collectively, the "Services").
 
 By accessing or using the Services, you agree to be bound by these Terms and all applicable laws and regulations. If you do not agree with any part of these Terms, you must immediately discontinue your access to and use of the Services.
 

@@ -5,7 +5,7 @@ lastUpdated: 2025-03-05
 ---
 ## 1. INTRODUCTION
 
-This Refund Policy ("Policy") governs all refunds and credits issued by Nelexa, Inc. ("Company," "we," "us," or "our") relating to our cloud compute services, dedicated servers, managed services, and DDoS protection solutions (collectively, the "Services"). By purchasing or using any of our Services, you ("Customer," "you," or "your") agree to be bound by this Policy.
+This Refund Policy ("Policy") governs all refunds and credits issued by Elcro Digital Services, LLC dba Nelexa Networks ("Company," "we," "us," or "our") relating to our cloud compute services, dedicated servers, managed services, and DDoS protection solutions (collectively, the "Services"). By purchasing or using any of our Services, you ("Customer," "you," or "your") agree to be bound by this Policy.
 
 ## 2. DEFINITIONS
 
